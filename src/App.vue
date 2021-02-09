@@ -1,22 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <img
+    class=""
+    alt="Vue logo"
+    src="./assets/logo.png"
+  >
+  <div class="container">
+    <div class="grid grid-cols-6 gap-5">
+      <!-- <div class="flex-initial">111</div>
+      <div class="flex-1">222</div>
+      <div class="flex-initial">333</div> -->
+      <div class="row-span-2 row-start-2 col-start-6">
+        111
+      </div>
+      <div>222</div>
+      <div>333</div>
+      <div class="col-start-6">
+        444
+      </div>
+      <div>555</div>
+      <div>666</div>
+      <div>777</div>
+      <div>888888</div>
+      <div>999</div>
+      <div>000</div>
+      <div>111</div>
+      <div>111</div>
+      <div>111</div>
+      <div>111</div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
