@@ -29,8 +29,13 @@
       <div>111</div>
     </div>
   </div>
+  <mytest
+    set-color-a="#ffc111"
+    set-color-b="#41bbd6"
+    set-color-c="#e96143"
+  />
 </template>
 
 <script setup>
-
+import mytest from './componnets/test.vue';
 </script>
