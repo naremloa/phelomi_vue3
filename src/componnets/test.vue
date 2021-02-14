@@ -1,114 +1,49 @@
 <template>
-  <div class="outside">
-    <a
-      v-show="toggleA"
-      class="inside-size"
-      :style="{'border-color':setColorA}"
-      @mouseover.stop="toggleA = !toggleA"
+  <a
+    class="block w-2015vw h-2015vw border-1vw border-solid text-center leading-1815vw rounded-3vw"
+    :style="toggleLinkType"
+    @mouseover.stop="toggle = false"
+    @mouseleave.stop="toggle = true"
+  >
+    <p
+      class="inline-block text-3vw font-bold tracking-03vw align-middle leading-none"
+      :style="toggleTextType"
     >
-      <p
-        class="text-style"
-        :style="{color:setColorA}"
-      >
-        {{ contentTextA }}
-      </p>
-    </a>
-    <a
-      v-show="!toggleA"
-      class="inside-size"
-      style="cursor:pointer"
-      :style="{'border-color':setColorA,'background-color':setColorA}"
-      @mouseleave.stop="toggleA = !toggleA"
-    >
-      <p
-        class="text-style"
-        style="color:white"
-      >
-        {{ contentTextA }}
-      </p>
-    </a>
-
-    <a
-      v-show="toggleB"
-      class="inside-size"
-      :style="{'border-color':setColorB}"
-      @mouseover.stop="toggleB = !toggleB"
-    >
-      <p
-        class="text-style"
-        :style="{color:setColorB}"
-      >
-        {{ contentTextB }}
-      </p>
-    </a>
-    <a
-      v-show="!toggleB"
-      class="inside-size"
-      style="cursor:pointer"
-      :style="{'border-color':setColorB,'background-color':setColorB}"
-      @mouseleave.stop="toggleB = !toggleB"
-    >
-      <p
-        class="text-style"
-        style="color:white"
-      >
-        {{ contentTextB }}
-      </p>
-    </a>
-
-    <a
-      v-show="toggleC"
-      class="inside-size"
-      :style="{'border-color':setColorC}"
-      @mouseover.stop="toggleC = !toggleC"
-    >
-      <p
-        class="text-style"
-        :style="{color:setColorC}"
-      >
-        {{ contentTextC }}
-      </p>
-    </a>
-    <a
-      v-show="!toggleC"
-      class="inside-size"
-      style="cursor:pointer"
-      :style="{'border-color':setColorC,'background-color':setColorC}"
-      @mouseleave.stop="toggleC = !toggleC"
-    >
-      <p
-        class="text-style"
-        style="color:white"
-      >
-        {{ contentTextC }}
-      </p>
-    </a>
-  </div>
+      {{ contentText }}
+    </p>
+  </a>
 </template>
 
 <script>
 export default {
-  props: ['setColorA', 'setColorB', 'setColorC'],
+  props: ['setColor', 'contentText'],
   data() {
     return {
-      contentTextA: '跳島趣行程',
-      contentTextB: '愛玩水行程',
-      contentTextC: '愛浪漫行程',
-      toggleA: true,
-      toggleB: true,
-      toggleC: true,
+      toggle: true,
     };
+  },
+  computed: {
+    toggleLinkType() {
+      const vm = this;
+      if (vm.toggle) {
+        return { 'border-color': vm.setColor };
+      }
+      return { 'border-color': vm.setColor, 'background-color': vm.setColor, cursor: 'pointer' };
+    },
+    toggleTextType() {
+      const vm = this;
+      if (vm.toggle) {
+        return { color: vm.setColor };
+      }
+      return { color: 'white' };
+    },
   },
 };
 
 </script>
 
 <style scoped>
-div.outside {
-  display:flex;
-  justify-content: space-evenly;
-}
-a.inside-size {
+  /* a.inside-size {
   display:block;
   width:20.15vw;
   height:20.15vw;
@@ -116,13 +51,13 @@ a.inside-size {
   border-radius: 3vw;
   text-align:center;
   line-height: 18.15vw;
-}
-
-.text-style {
+  }
+  .text-style {
   font-size: 3vw;
   font-weight: bold;
   letter-spacing: 0.3vw;
   vertical-align: middle;
-
-}
+  line-height:1;
+  display:inline-block;
+}*/
 </style>

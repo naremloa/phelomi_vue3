@@ -29,13 +29,17 @@
       <div>111</div>
     </div>
   </div>
-  <mytest
-    set-color-a="#ffc111"
-    set-color-b="#41bbd6"
-    set-color-c="#e96143"
-  />
+  <div class="flex justify-evenly">
+    <mytest
+      set-color="#ffc111"
+      content-text="跳島趣行程"
+    />
+  </div>
 </template>
 
 <script setup>
 import mytest from './componnets/test.vue';
 </script>
+
+<style scoped>
+</style>
