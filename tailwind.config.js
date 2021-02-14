@@ -28,9 +28,9 @@ module.exports = {
         '03vw': '0.3vw',
       },
     },
-    variants: {
-      extend: {},
-    },
-    plugins: [],
   },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
 };
