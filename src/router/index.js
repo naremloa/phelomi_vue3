@@ -1,14 +1,13 @@
 import {
-  createMemoryHistory,
   createRouter as _createRouter,
+  createMemoryHistory,
   createWebHistory,
 } from 'vue-router';
 
-/* eslint-disabled */
-const pages = import.meta.glob('./views/*.vue');
+const pages = import.meta.glob('../views/*.vue');
 
 const routes = Object.keys(pages).map((path) => {
-  const name = path.match(/\.\/pages(.*)\.vue$/)[1].toLowerCase();
+  const name = path.match(/\.\.\/views(.*)\.vue$/)[1].toLowerCase();
   return {
     path: name === '/home' ? '/' : name,
     component: pages[path], // () => import('./pages/*.vue')
