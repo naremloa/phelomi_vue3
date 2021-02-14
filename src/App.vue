@@ -6,9 +6,6 @@
   >
   <div class="container">
     <div class="grid grid-cols-6 gap-5">
-      <!-- <div class="flex-initial">111</div>
-      <div class="flex-1">222</div>
-      <div class="flex-initial">333</div> -->
       <div class="row-span-2 row-start-2 col-start-6">
         111
       </div>
@@ -28,9 +25,13 @@
       <div>111</div>
       <div>111</div>
     </div>
+    <div>count: {{ state.count }}</div>
+    <router-view />
   </div>
 </template>
 
 <script setup>
+import { reactive } from 'vue';
 
+const state = reactive({ count: 0 });
 </script>

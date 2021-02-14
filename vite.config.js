@@ -1,9 +1,10 @@
-import vue from '@vitejs/plugin-vue'
+/* eslint-disable import/no-extraneous-dependencies */
+import vue from '@vitejs/plugin-vue';
 
 /**
  * https://vitejs.dev/config/
  * @type {import('vite').UserConfig}
  */
 export default {
-  plugins: [vue()]
-}
+  plugins: [vue()],
+};
