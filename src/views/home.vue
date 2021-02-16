@@ -6,6 +6,8 @@
   <articles-block />
 </template>
 <script>
+import { onMounted } from 'vue';
+import axios from 'axios';
 import GalleryBlock from '@/components/GalleryBlock.vue';
 import NewsBlock from '@/components/NewsBlock.vue';
 import LocationBlock from '@/components/LocationBlock.vue';
@@ -20,6 +22,19 @@ export default {
     LocationBlock,
     MapBlock,
     ArticlesBlock,
+  },
+  setup() {
+    onMounted(async () => {
+      const instance = axios.create({
+        // baseURL: 'https://randomuser.me/',
+        baseURL: '',
+      });
+      const res = await instance({
+        url: '/api',
+        method: 'get',
+      });
+      console.log('mounted', res);
+    });
   },
 };
 </script>
