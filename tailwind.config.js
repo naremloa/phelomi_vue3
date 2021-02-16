@@ -7,25 +7,42 @@ module.exports = {
     },
     extend: {
       width: {
-        '2015vw': '20.15vw',
+        'screen-20.15vw': '20.15vw',
+        'screen-27.54': '27.54vw',
       },
       height: {
-        '2015vw': '20.15vw',
+        'screen-20.15vw': '20.15vw',
+        'screen-19.66': '19.66vw',
+      },
+      padding: {
+        'screen-0.4': '0.4vw',
+        'screen-0.95': '0.95vw',
+        'screen-2.42': '2.42vw',
       },
       borderWidth: {
-        '1vw': '1vw',
+        'screen-0.15': '0.15vw',
+        'screen-1vw': '1vw',
       },
       borderRadius: {
-        '3vw': '3vw',
+        'screen-3vw': '3vw',
+      },
+      textColor: {
+        'darkblue': '#2f599c'
+      },
+      borderColor: {
+        'darkblue': '#2f599c'
       },
       lineHeight: {
-        '1815vw': '18.15vw',
+        'screen-18.15vw': '18.15vw',
       },
       fontSize: {
-        '3vw': '3vw',
+        'screen-3vw': '3vw',
+        'screen-1.3': '1.3vw',
+        'screen-2.08': '2.08vw',
       },
       letterSpacing: {
-        '03vw': '0.3vw',
+        'screen-0.3vw': '0.3vw',
+        'screen-0.4': '0.4vw',
       },
     },
   },

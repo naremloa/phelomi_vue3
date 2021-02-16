@@ -1,12 +1,12 @@
 <template>
   <a
-    class="block w-2015vw h-2015vw border-1vw border-solid text-center leading-1815vw rounded-3vw"
+    class="block w-screen-20.15vw h-screen-20.15vw border-screen-1vw border-solid text-center leading-screen-18.15vw rounded-screen-3vw"
     :style="toggleLinkType"
     @mouseover.stop="toggle = false"
     @mouseleave.stop="toggle = true"
   >
     <p
-      class="inline-block text-3vw font-bold tracking-03vw align-middle leading-none"
+      class="inline-block text-screen-3vw font-bold tracking-screen-0.3vw align-middle leading-none"
       :style="toggleTextType"
     >
       {{ contentText }}
