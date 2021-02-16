@@ -1,15 +1,16 @@
 <template>
-  <router-link to="/">
-    home
-  </router-link>
-  <router-link to="/about">
-    about
-  </router-link>
-  <router-view />
+  <layout>
+    <router-view />
+  </layout>
 </template>
 
-<script setup>
-import { reactive } from 'vue';
+<script>
+import Layout from '@/components/Layout/index.vue';
 
-const state = reactive({ count: 0 });
+export default {
+  components: { Layout },
+  setup() {
+
+  },
+};
 </script>
