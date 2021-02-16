@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import vue from '@vitejs/plugin-vue';
+import path from 'path';
 
 /**
  * https://vitejs.dev/config/
@@ -7,4 +8,7 @@ import vue from '@vitejs/plugin-vue';
  */
 export default {
   plugins: [vue()],
+  alias: {
+    '@': path.resolve(__dirname, 'src'),
+  },
 };
