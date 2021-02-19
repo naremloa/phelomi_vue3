@@ -5,7 +5,14 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        footer: '200px minmax(20px, 1fr) 100px',
+      },
+      gridTemplateRows: {
+        footer: '50px minmax(20px, 1fr) 50px',
+      },
+    },
   },
   variants: {
     extend: {},
