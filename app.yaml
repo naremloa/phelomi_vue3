@@ -1,0 +1,12 @@
+runtime: nodejs12 # Name of the App Engine language runtime used by this application
+#env: flex # Select the flexible environment
+
+instance_class: B1
+
+manual_scaling: # Enable manual scaling for a service
+  instances: 1 # 1 instance assigned to the service
+
+resources: # Control the computing resources
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10

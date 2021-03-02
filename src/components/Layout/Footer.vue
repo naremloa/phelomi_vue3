@@ -1,12 +1,46 @@
 <template>
-  <div class="footer w-full flex justify-center items-center h-60 bg-red-400">
-    <div>footer</div>
+  <div
+    id="Footer"
+    class="footer w-full h-250 bg-footer-texture bg-cover bg-left
+      flex flex-col justify-end"
+  >
+    <div class="bg-footer-info-texture bg-cover bg-left-top h-96">
+      <div class="pt-20 flex items-center flex-col">
+        <div class="w-65 h-44 flex">
+          <div class="w-2/5 flex justify-center">
+            <img
+              class="w-20 h-28"
+              :src="logoVertical"
+            >
+          </div>
+          <div class="w-3/5 px-5">
+            right
+          </div>
+        </div>
+        <div class="flex w-36 h-7 mt-5 mb-2">
+          <social-btn />
+          <social-btn />
+          <social-btn />
+          <social-btn />
+        </div>
+        <div class="text-center text-xs w-96">
+          © 2019 Family Starry Sky Co., Ltd. All rights reserved. 飛樂米星空號有限公司 版權所有
+          Design by 方蘋果數位行銷設計有限公司
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-export default {
-  setup() {
+import logoVertical from '../../assets/logo/logo_vertical.svg';
+import SocialBtn from './components/SocialBtn.vue';
 
+export default {
+  components: { SocialBtn },
+  setup() {
+    return {
+      logoVertical,
+    };
   },
 };
 </script>

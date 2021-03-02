@@ -1,29 +1,30 @@
 <template>
-  <block
-    id="RoomsBlock"
-    class="bg-purple-300"
-    :title="blockTitle"
-  >
+  <div class="p-6">
+    <div>圖片區</div>
+    <div class="flex px-20 py-12">
+      <div class="w-3/4">
+        左
+      </div>
+      <div class="w-1/4">
+        右
+      </div>
+    </div>
+    <div>探索房型</div>
     <rooms-swiper :options="options">
       <template #default="item">
         <room-item v-bind="item" />
       </template>
     </rooms-swiper>
-  </block>
+  </div>
 </template>
 <script>
-import Block from './Block.vue';
-import { RoomsSwiper } from './Swiper';
-import RoomItem from './RoomItem.vue';
+import { RoomsSwiper } from '@/components/Swiper';
+import RoomItem from '@/components/RoomItem.vue';
 
 export default {
-  name: 'RoomsBlock',
-  components: { Block, RoomsSwiper, RoomItem },
+  name: 'Room',
+  components: { RoomsSwiper, RoomItem },
   setup() {
-    const blockTitle = {
-      zh: '房間介紹',
-      en: 'ROOMS',
-    };
     const options = [
       { name: 'room1' },
       { name: 'room2' },
@@ -34,7 +35,6 @@ export default {
       { name: 'room7' },
     ];
     return {
-      blockTitle,
       options,
     };
   },

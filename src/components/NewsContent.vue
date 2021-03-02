@@ -1,9 +1,21 @@
 <template>
-  <div class="news-content px-32 grid grid-flow-row grid-rows-6 grid-cols-5 gap-2">
-    <div class="news-image bg-white row-start-1 row-end-7 col-start-1 col-end-3" />
-    <div class="news-title bg-white row-start-1 row-end-3 col-start-3 col-end-6" />
-    <div class="news-title bg-white row-start-3 row-end-4 col-start-3 col-end-6" />
-    <div class="news-title bg-white row-start-4 row-end-7 col-start-3 col-end-6" />
+  <div class="news-content flex px-6 pb-4">
+    <div class="news-image bg-white w-4/12 h-full mx-12" />
+    <div class="news-content pr-11 w-full h-full">
+      <div class="mb-4 pb-4">
+        <div class="bg-white text-3xl">
+          title
+        </div>
+      </div>
+      <div class="mt-1 mb-2 bg-white">
+        content
+      </div>
+      <div>
+        <button class="bg-white h-9 w-28">
+          按鈕
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 <script>

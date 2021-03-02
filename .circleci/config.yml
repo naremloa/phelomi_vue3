@@ -1,7 +1,72 @@
-version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-workflows:
-  node-tests:
+version: 2.1 # use CircleCI 2.1
+jobs: # a collection of steps
+  build: # runs not using Workflows must have a `build` job as entry point
+    docker: # run the steps with Docker
+      - image: circleci/node:latest # with this image as the primary container; this is where all `steps` will run
+    steps: # a collection of executable commands
+      - checkout # special step to check out source code to working directory
+      - run:
+          name: Check Node.js version
+          command: node -v
+      - run:
+          name: Install yarn
+          command: 'curl -o- -L https://yarnpkg.com/install.sh | bash'
+      - restore_cache: # special step to restore the dependency cache
+          name: Restore dependencies from cache
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install dependencies if needed
+          command: |
+            if [ ! -d node_modules ]; then
+              yarn install --frozen-lockfile
+            fi
+      - save_cache: # special step to save the dependency cache in case there's something new in yarn.lock
+          name: Cache dependencies
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run: #run build
+          name: Build
+          command: yarn run build
+      - persist_to_workspace: # Special step used to persist a temporary file to be used by another job in the workflow.# We will run deploy later,it will be put in another job.
+          root: .
+          paths:
+            - dist
+            - package.json
+            - yarn.lock
+            - app.yaml
+            - server.js
+  deploy:
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      #info: https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs
+      - attach_workspace: # Get saved data by configuring the attach_workspace
+          at: . # Must be absolute path or relative path from working_directory
+      - run:
+          name: ls
+          command: ls -al # list all files including hidden files and information
+      - run: #info: https://circleci.com/docs/2.0/google-auth/
+          name: Setup gcloud env
+          command: |
+            echo $GCP_KEY > gcloud-service-key.json
+            gcloud auth activate-service-account --key-file=gcloud-service-key.json
+            gcloud --quiet config set project ${GCP_PROJECT_ID}
+            gcloud --quiet config set compute/zone ${GCP_REGION}
+            gcloud --quiet config set app/stop_previous_version true
+      - run:
+          name: Deploy to App Engine
+          command: gcloud app deploy
+workflows: #  A set of rules for defining a collection of jobs and their run order
+  version: 2
+  build-deploy:
     jobs:
-      - node/test
+      - build:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v(\d+)\.(\d+)\.(\d+)/
+      - deploy:
+          requires:
+            - build
