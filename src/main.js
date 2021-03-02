@@ -1,9 +1,19 @@
-import { createApp } from 'vue';
+import { createSSRApp } from 'vue';
 import { createRouter } from './router';
 import App from './App.vue';
 import './styles/index.css';
 
-const app = createApp(App);
-const router = createRouter();
-app.use(router);
-app.mount('#app');
+// SSR requires a fresh app instance per request, therefore we export a function
+// that creates a fresh app instance. If using Vuex, we'd also be creating a
+// fresh store here.
+
+// import { worker } from './mocks/browser';
+
+// worker.start();
+
+export function createApp() {
+  const app = createSSRApp(App);
+  const router = createRouter();
+  app.use(router);
+  return { app, router };
+}
