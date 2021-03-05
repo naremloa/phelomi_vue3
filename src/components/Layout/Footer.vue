@@ -1,7 +1,7 @@
 <template>
   <div
     id="Footer"
-    class="footer w-full h-250 bg-footer-texture bg-cover bg-left
+    class="footer w-full h-250 mt-10 bg-footer-texture bg-cover bg-left
       flex flex-col justify-end"
   >
     <div class="bg-footer-info-texture bg-cover bg-left-top h-96">

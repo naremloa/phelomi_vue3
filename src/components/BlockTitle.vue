@@ -1,6 +1,6 @@
 <template>
   <div class="block-title w-full h-32 pl-20 flex">
-    <div class="max-w-1/2">
+    <div class="">
       <div class="flex items-end h-16">
         <div class="text-4xl pl-6 pr-3">
           {{ zh }}
