@@ -1,16 +1,19 @@
 <template>
-  <div class="block-title w-full h-32 pl-20 flex">
+  <div class="block-title text-primary w-full h-32 pl-20 flex">
     <div class="">
-      <div class="flex items-end h-16">
-        <div class="text-4xl pl-6 pr-3">
+      <div class="flex items-end h-16 bg-title-texture bg-cover bg-right">
+        <div class="text-4xl pl-6 pr-3 pb-1">
           {{ zh }}
         </div>
-        <div>
-          <img :src="titleLogo">
+        <div class="w-18 h-16">
+          <!-- <img :src="titleLogo"> -->
         </div>
       </div>
-      <div class="text-3xl pt-1">
-        <span class="pl-3">{{ en }}</span>
+      <div class="text-3xl pt-1 flex items-start">
+        <div class="pl-3">
+          {{ en }}
+        </div>
+        <div class="w-18" />
       </div>
     </div>
   </div>

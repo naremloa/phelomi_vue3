@@ -16,6 +16,16 @@ module.exports = {
       '1/3': '33.33%',
     },
     extend: {
+      colors: {
+        primary: '#2F599C',
+        secondary: '#142952',
+        accent: '#C4E4EE',
+        textBlack: '#231815',
+        error: '#E96143',
+        info: '#41BBD6',
+        success: '#94BF80',
+        warning: '#FFC107',
+      },
       width: {
         18: '4.5rem',
         30: '7.5rem',
@@ -32,6 +42,8 @@ module.exports = {
         'nav-item-texture': 'url("/assets/bg_image/bg_nav-item.png")',
         'footer-texture': 'url("/assets/bg_image/bg_order.png")',
         'footer-info-texture': 'url("/assets/bg_image/bg_footer.png")',
+        'header-texture': 'url("/assets/bg_image/bg_header.jpg")',
+        'title-texture': 'url("/assets/bg_image/bg_title.png")',
       }),
     },
   },

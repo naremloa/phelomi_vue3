@@ -1,5 +1,5 @@
 <template>
-  <div class="header w-full bg-green-400 h-32 px-3 relative">
+  <div class="header w-full bg-green-400 h-32 px-3 relative bg-header-texture bg-cover">
     <div class="w-full h-full flex items-center justify-center md:justify-start">
       <div
         class="w-65 cursor-pointer mr-4"

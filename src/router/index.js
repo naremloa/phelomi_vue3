@@ -40,7 +40,7 @@ export function createRouter() {
     routes,
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) return savedPosition;
-      if (to.hash) return { el: to.hash };
+      if (to.hash) return { el: to.hash, behavior: 'smooth' };
       // 預設 始終滾動頂部
       return { top: 0 };
     },
