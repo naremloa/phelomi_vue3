@@ -14,7 +14,6 @@
       <menu-item
         v-for="(item, iIdx) in menuItems"
         :key="`menu-item-${iIdx}`"
-        class="hidden md:block"
         v-bind="item"
       />
     </div>
@@ -45,23 +44,27 @@ export default {
     const jumpTo = (obj) => () => { router.push(obj); };
     const menuItems = [
       {
-        label: '菜單按鈕1',
+        label: '最新消息',
         hash: '#NewsBlock',
       },
       {
-        label: '菜單按鈕2',
+        label: '房型介紹',
         hash: '#RoomsBlock',
       },
       {
-        label: '菜單按鈕3',
+        label: '交通位置',
         hash: '#LocationBlock',
       },
       {
-        label: '菜單按鈕4',
+        label: '澎湖找樂子',
         hash: '#MapBlock',
       },
       {
-        label: '菜單按鈕5',
+        label: '跟我醬玩',
+        hash: '#ArticlesBlock',
+      },
+      {
+        label: '線上訂房',
         hash: '#ArticlesBlock',
       },
       {

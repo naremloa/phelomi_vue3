@@ -1,9 +1,22 @@
 <template>
   <div
-    class="bg-blue-600 w-28 h-12 cursor-pointer ml-1"
+    class="w-30 min-w-30 h-14 cursor-pointer ml-1 pt-3
+    hidden md:flex justify-end items-center
+    bg-nav-item-texture
+    hover:bg-nav-item-texture-hover
+    bg-right-bottom
+    bg-cover
+    bg-no-repeat
+    "
     @click="handleClick"
   >
-    {{ label }}
+    <span
+      class="text-white whitespace-nowrap
+      w-18
+      "
+    >
+      {{ label }}
+    </span>
   </div>
 </template>
 <script>
