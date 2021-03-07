@@ -5,9 +5,9 @@ module.exports = {
     container: false,
   },
   theme: {
-    screens: {
-      laptop: '1024px',
-    },
+    // screens: {
+    //   laptop: '1024px',
+    // },
     maxWidth: {
       '1/2': '50%',
       '1/3': '33.33%',

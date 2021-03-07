@@ -18,10 +18,10 @@
           </div>
         </div>
         <div class="flex w-36 h-7 mt-5 mb-2">
-          <social-btn />
-          <social-btn />
-          <social-btn />
-          <social-btn />
+          <social-btn-facebook />
+          <social-btn-line />
+          <social-btn-wechat />
+          <social-btn-instagram />
         </div>
         <div class="text-center text-xs w-96">
           © 2019 Family Starry Sky Co., Ltd. All rights reserved. 飛樂米星空號有限公司 版權所有
@@ -33,10 +33,15 @@
 </template>
 <script>
 import logoVertical from '../../assets/logo/logo_vertical.svg';
-import SocialBtn from './components/SocialBtn.vue';
+import SocialBtnFacebook from './components/SocialBtnFacebook.vue';
+import SocialBtnInstagram from './components/SocialBtnInstagram.vue';
+import SocialBtnLine from './components/SocialBtnLine.vue';
+import SocialBtnWechat from './components/SocialBtnWechat.vue';
 
 export default {
-  components: { SocialBtn },
+  components: {
+    SocialBtnFacebook, SocialBtnInstagram, SocialBtnLine, SocialBtnWechat,
+  },
   setup() {
     return {
       logoVertical,
