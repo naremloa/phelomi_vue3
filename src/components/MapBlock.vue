@@ -1,11 +1,10 @@
 <template>
   <block
     id="MapBlock"
-    class="bg-indigo-300"
+    class="bg-map-texture bg-cover h-full"
     :title="blockTitle"
-  >
-    map-block
-  </block>
+    style="min-height: 68.38vw"
+  />
 </template>
 <script>
 import Block from './Block.vue';
@@ -16,7 +15,7 @@ export default {
   setup() {
     const blockTitle = {
       en: 'HAVE FUN',
-      zh: '找樂子',
+      zh: '澎湖找樂子',
     };
     return {
       blockTitle,

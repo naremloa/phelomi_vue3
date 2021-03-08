@@ -7,7 +7,7 @@ import news_travel from '@/assets/news_block/news_travel.jpg';
 export default [
   {
     img: news_4,
-    title: '2021澎湖國際海上花火節4/22~6/28 璀燦星空 邀您感受幸福~~',
+    title: '2021澎湖國際海上花火節 4/22~6/28 璀燦星空 邀您感受幸福~~',
     content: '嗨翻菊島，精彩可期，錯過可惜，開放早鳥優惠訂房~~要搶要快...',
     url: '',
   },

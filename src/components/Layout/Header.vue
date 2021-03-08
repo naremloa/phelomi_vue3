@@ -17,7 +17,7 @@
         v-bind="item"
       />
     </div>
-    <div class="absolute w-36 h-7 top-2 right-8 flex">
+    <div class="absolute w-36 h-7 top-2 right-2 md:right-8 flex">
       <social-btn-facebook />
       <social-btn-line />
       <social-btn-wechat />

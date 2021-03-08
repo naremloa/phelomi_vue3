@@ -1,6 +1,9 @@
 <template>
-  <div class="block-title text-primary w-full h-32 pl-20 flex">
-    <div class="">
+  <div
+    class="block-title text-primary w-full h-32 md:pl-20 font-bold
+    flex justify-end md:justify-start "
+  >
+    <div>
       <div class="flex items-end h-16 bg-title-texture bg-cover bg-right">
         <div class="text-4xl pl-6 pr-3 pb-1">
           {{ zh }}

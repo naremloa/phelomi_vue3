@@ -7,33 +7,57 @@
   >
     <div class="w-full h-52 relative">
       <img
+        v-if="img"
         class="w-full h-full"
-        :src="imgSrc"
+        :src="img"
       >
       <div
         v-show="focus"
         class="w-full h-52 bg-gray-800 top-0 left-0 absolute bg-opacity-60"
       />
     </div>
-    <div class="w-full text-xl text-center">
-      {{ name }}
-    </div>
-    <div class="w-full text-center">
-      content content content content content content
+    <div class="flex">
+      <img
+        class="w-3 h-3 mt-2"
+        :src="star"
+      >
+      <div class="px-6">
+        <div class="w-full text-2xl text-center text-primary font-bold whitespace-nowrap">
+          {{ name }}
+        </div>
+        <div
+          v-if="content"
+          class="w-full text-center"
+        >
+          {{ content }}
+        </div>
+      </div>
+      <img
+        class="w-3 h-3 mt-2"
+        :src="star"
+      >
     </div>
   </div>
 </template>
 <script>
 import { ref, toRefs } from 'vue';
 import { useRouter } from 'vue-router';
+import star from '@/assets/bg_image/icon_star.svg';
 
-const imgSrc = 'https://fakeimg.pl/302x221/';
 export default {
   name: 'RoomItem',
   props: {
     name: {
       type: String,
       required: true,
+    },
+    content: {
+      type: String,
+      default: '',
+    },
+    img: {
+      type: String,
+      default: '',
     },
   },
   setup(props) {
@@ -51,10 +75,9 @@ export default {
         name: 'Room',
         params: { id: name.value },
       });
-      console.log('handleClick');
     };
     return {
-      imgSrc,
+      star,
       focus,
       handleFocus,
       handleBlur,

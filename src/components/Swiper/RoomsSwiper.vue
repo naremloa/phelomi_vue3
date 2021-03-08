@@ -4,11 +4,11 @@
     :options="roomOptions"
   >
     <template #default="row">
-      <div class="flex">
+      <div class="flex flex-col md:flex-row items-center">
         <div
           v-for="(item, iIdx) in row"
           :key="iIdx"
-          class="flex-grow max-w-1/3"
+          class="flex-grow md:max-w-1/3"
         >
           <slot v-bind="item" />
         </div>

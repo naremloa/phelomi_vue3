@@ -18,6 +18,7 @@
   </div>
 </template>
 <script>
+import roomsBlock from '@/data/roomsBlock';
 import { RoomsSwiper } from '@/components/Swiper';
 import RoomItem from '@/components/RoomItem.vue';
 
@@ -25,15 +26,7 @@ export default {
   name: 'Room',
   components: { RoomsSwiper, RoomItem },
   setup() {
-    const options = [
-      { name: 'room1' },
-      { name: 'room2' },
-      { name: 'room3' },
-      { name: 'room4' },
-      { name: 'room5' },
-      { name: 'room6' },
-      { name: 'room7' },
-    ];
+    const options = roomsBlock;
     return {
       options,
     };

@@ -8,6 +8,13 @@ module.exports = {
     // screens: {
     //   laptop: '1024px',
     // },
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      normal: '0',
+      wider: '.05em',
+      widest: '.25em',
+    },
     minWidth: {
       30: '7.5rem',
     },
@@ -40,8 +47,18 @@ module.exports = {
       height: {
         96: '24rem',
         160: '40rem',
+        164: '41rem',
         280: '70rem',
         281: '70.25rem',
+      },
+      margin: {
+        '1/4': '25%',
+        '-1/2': '-50%',
+        '-1/4': '-25%',
+        '-1/8': '-12.5%',
+      },
+      zIndex: {
+        '-1': -1,
       },
       backgroundImage: () => ({
         'nav-item-texture-hover': 'url("/assets/bg_image/bg_nav-item_hover.png")',
@@ -50,6 +67,8 @@ module.exports = {
         'footer-info-texture': 'url("/assets/bg_image/bg_footer.png")',
         'header-texture': 'url("/assets/bg_image/bg_header.jpg")',
         'title-texture': 'url("/assets/bg_image/bg_title.png")',
+        'map-texture': 'url("/assets/bg_image/bg_haveFun.jpg")',
+        'location-texture': 'url("/assets/bg_image/bg_location.jpg")',
       }),
     },
   },

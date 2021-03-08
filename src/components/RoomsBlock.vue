@@ -1,17 +1,21 @@
 <template>
   <block
     id="RoomsBlock"
-    class="bg-purple-300"
+    class=""
     :title="blockTitle"
   >
     <rooms-swiper :options="options">
       <template #default="item">
-        <room-item v-bind="item" />
+        <room-item
+          class="mb-4"
+          v-bind="item"
+        />
       </template>
     </rooms-swiper>
   </block>
 </template>
 <script>
+import roomsBlock from '@/data/roomsBlock';
 import Block from './Block.vue';
 import { RoomsSwiper } from './Swiper';
 import RoomItem from './RoomItem.vue';
@@ -24,15 +28,7 @@ export default {
       zh: '房間介紹',
       en: 'ROOMS',
     };
-    const options = [
-      { name: 'room1' },
-      { name: 'room2' },
-      { name: 'room3' },
-      { name: 'room4' },
-      { name: 'room5' },
-      { name: 'room6' },
-      { name: 'room7' },
-    ];
+    const options = roomsBlock;
     return {
       blockTitle,
       options,
