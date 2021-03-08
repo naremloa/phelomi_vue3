@@ -3,21 +3,21 @@
     id="LocationBlock"
     :title="blockTitle"
   >
-    <div class="relative">
-      <!-- bg-location-texture bg-cover bg-no-repeat bg-right -->
+    <div class="relative overflow-hidden -ml-6">
       <div
-        class="absolute top-0 right-1/2 bottom-20 -z-1
-          -mr-1/8 md:-mr-1/4 overflow-hidden"
-        style="width: 100vw;"
+        class="absolute -z-1 flex flex-col items-center w-full
+        transform -translate-x-1/4
+          overflow-hidden"
       >
         <img
-          class="h-full w-full ml-1/4"
+          class="h-full w-full"
           src="/assets/bg_image/bg_location.jpg"
         >
       </div>
       <div
-        class="flex flex-col items-center
-        text-white text-sm pt-32 -mr-1/4 md:-mr-1/2"
+        class="flex flex-col items-center w-full
+        transform translate-x-1/4
+        text-white text-sm pt-32"
       >
         <location-item
           class="bg-info mb-4"
