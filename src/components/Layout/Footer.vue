@@ -1,10 +1,10 @@
 <template>
   <div
     id="Footer"
-    class="footer w-full h-250 mt-10 bg-footer-texture bg-cover bg-left
+    class="footer w-full h-280 mt-10 bg-footer-texture bg-cover bg-left-top
       flex flex-col justify-end"
   >
-    <div class="bg-footer-info-texture bg-cover bg-left-top h-96">
+    <div class="bg-footer-info-texture bg-cover bg-top h-96">
       <div class="pt-20 flex items-center flex-col">
         <div class="w-65 h-44 flex">
           <div class="w-2/5 flex justify-center">

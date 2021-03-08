@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-6 py-8">
+  <div class="w-full md:px-6 py-8">
     <block-title v-bind="title" />
     <div class="h-auto">
       <slot />

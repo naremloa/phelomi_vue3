@@ -11,9 +11,9 @@ module.exports = {
     minWidth: {
       30: '7.5rem',
     },
-    maxWidth: {
-      '1/2': '50%',
-      '1/3': '33.33%',
+
+    maxHeight: {
+      160: '40rem',
     },
     extend: {
       colors: {
@@ -33,9 +33,15 @@ module.exports = {
         65: '16.25rem',
         75: '18.75rem',
       },
+      maxWidth: {
+        '1/2': '50%',
+        '1/3': '33.33%',
+      },
       height: {
         96: '24rem',
-        250: '62.5rem',
+        160: '40rem',
+        280: '70rem',
+        281: '70.25rem',
       },
       backgroundImage: () => ({
         'nav-item-texture-hover': 'url("/assets/bg_image/bg_nav-item_hover.png")',

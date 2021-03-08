@@ -4,7 +4,7 @@
   >
     <img
       v-if="src"
-      class="w-full h-full object-contain"
+      class="w-full h-full object-cover"
       :src="src"
     >
   </div>
