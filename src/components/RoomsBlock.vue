@@ -15,7 +15,7 @@
   </block>
 </template>
 <script>
-import roomsBlock from '@/data/roomsBlock';
+import roomsData from '@/data/roomsData';
 import Block from './Block.vue';
 import { RoomsSwiper } from './Swiper';
 import RoomItem from './RoomItem.vue';
@@ -28,7 +28,7 @@ export default {
       zh: '房間介紹',
       en: 'ROOMS',
     };
-    const options = roomsBlock;
+    const options = roomsData;
     return {
       blockTitle,
       options,

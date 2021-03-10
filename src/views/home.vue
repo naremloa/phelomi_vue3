@@ -12,6 +12,7 @@
   <location-block />
   <map-block />
   <articles-block />
+  <footer-block />
 </template>
 <script>
 // import { onMounted } from 'vue';
@@ -22,6 +23,7 @@ import RoomsBlock from '@/components/RoomsBlock.vue';
 import LocationBlock from '@/components/LocationBlock.vue';
 import MapBlock from '@/components/MapBlock.vue';
 import ArticlesBlock from '@/components/ArticlesBlock.vue';
+import FooterBlock from '@/components/FooterBlock.vue';
 
 export default {
   name: 'Home',
@@ -32,6 +34,7 @@ export default {
     LocationBlock,
     MapBlock,
     ArticlesBlock,
+    FooterBlock,
   },
   setup() {
     // onMounted(async () => {

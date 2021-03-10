@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6">
+  <div class="p-6 mb-24">
     <div>圖片區</div>
     <div class="flex px-20 py-12">
       <div class="w-3/4">
@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-import roomsBlock from '@/data/roomsBlock';
+import roomsData from '@/data/roomsData';
 import { RoomsSwiper } from '@/components/Swiper';
 import RoomItem from '@/components/RoomItem.vue';
 
@@ -26,7 +26,7 @@ export default {
   name: 'Room',
   components: { RoomsSwiper, RoomItem },
   setup() {
-    const options = roomsBlock;
+    const options = roomsData;
     return {
       options,
     };

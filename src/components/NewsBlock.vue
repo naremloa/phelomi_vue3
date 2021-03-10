@@ -15,7 +15,7 @@
   </block>
 </template>
 <script>
-import newsContent from '@/data/newsBlock';
+import newsData from '@/data/newsData';
 import { computed } from 'vue';
 import Block from './Block.vue';
 import { ContentSwiper } from './Swiper';
@@ -36,10 +36,11 @@ export default {
 
     const maxARow = 2;
     const newsOptions = computed(() => {
-      const [result, rest] = newsContent.reduce((acc, cur) => {
+      const [result, rest] = newsData.reduce((acc, cur) => {
         const [source, tmp] = acc;
-        if (tmp.length >= maxARow) return [[...source, [...tmp]], [cur]];
-        return [source, [...tmp, cur]];
+        const { short = {}, id } = cur;
+        if (tmp.length >= maxARow) return [[...source, [...tmp]], [{ id, ...short }]];
+        return [source, [...tmp, { id, ...short }]];
       }, [[], []]);
       return [...result, rest];
     });

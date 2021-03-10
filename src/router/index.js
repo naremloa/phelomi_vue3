@@ -27,6 +27,11 @@ const routes = [
     component: () => import('@/views/room.vue'),
   },
   {
+    path: '/news/:id',
+    name: 'News',
+    component: () => import('@/views/news.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     redirect: '/',
   },

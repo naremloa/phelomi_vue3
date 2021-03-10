@@ -22,12 +22,16 @@
         :src="star"
       >
       <div class="px-6">
-        <div class="w-full text-2xl text-center text-primary font-bold whitespace-nowrap">
+        <div
+          class="w-full whitespace-nowrap
+            text-2xl text-center text-primary font-bold
+            py-1 border-solid border-b border-primary"
+        >
           {{ name }}
         </div>
         <div
           v-if="content"
-          class="w-full text-center"
+          class="w-full text-center text-sm py-1 tracking-widest"
         >
           {{ content }}
         </div>

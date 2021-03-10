@@ -6,8 +6,8 @@
     <div class="relative overflow-hidden -ml-6">
       <div
         class="absolute -z-1 flex flex-col items-center w-full
-        transform -translate-x-1/4
-          overflow-hidden"
+        transform -translate-x-1/4 h-9/10
+        overflow-hidden"
       >
         <img
           class="h-full w-full"
@@ -23,16 +23,19 @@
           class="bg-info mb-4"
           title="民宿地理位置"
           :img="position"
+          :active="positionActive"
         />
         <location-item
           class="bg-warning mb-4"
           title="搭船"
           :img="ship"
+          :active="shipActive"
         />
         <location-item
           class="bg-error"
           title="搭飛機"
           :img="airplane"
+          :active="airplaneActive"
         />
       </div>
     </div>
@@ -40,8 +43,11 @@
 </template>
 <script>
 import position from '@/assets/location/icon_position.svg';
+import positionActive from '@/assets/location/icon_position_active.svg';
 import ship from '@/assets/location/icon_ship.svg';
+import shipActive from '@/assets/location/icon_ship_active.svg';
 import airplane from '@/assets/location/icon_airplane.svg';
+import airplaneActive from '@/assets/location/icon_airplane_active.svg';
 import LocationItem from '@/components/LocationItem.vue';
 import Block from './Block.vue';
 
@@ -56,8 +62,11 @@ export default {
     return {
       blockTitle,
       position,
+      positionActive,
       ship,
+      shipActive,
       airplane,
+      airplaneActive,
     };
   },
 };

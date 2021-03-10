@@ -8,6 +8,9 @@ module.exports = {
     // screens: {
     //   laptop: '1024px',
     // },
+    fontFamily: {
+      sans: 'Noto Sans TC,Microsoft JhengHei,"微軟正黑體",STHeiti,sans-serif',
+    },
     letterSpacing: {
       tightest: '-.075em',
       tighter: '-.05em',
@@ -15,13 +18,7 @@ module.exports = {
       wider: '.05em',
       widest: '.25em',
     },
-    minWidth: {
-      30: '7.5rem',
-    },
 
-    maxHeight: {
-      160: '40rem',
-    },
     extend: {
       colors: {
         primary: '#2F599C',
@@ -40,6 +37,9 @@ module.exports = {
         65: '16.25rem',
         75: '18.75rem',
       },
+      minWidth: {
+        30: '7.5rem',
+      },
       maxWidth: {
         '1/2': '50%',
         '1/3': '33.33%',
@@ -48,14 +48,26 @@ module.exports = {
         96: '24rem',
         160: '40rem',
         164: '41rem',
+        180: '44rem',
         280: '70rem',
         281: '70.25rem',
+        '9/10': '90%',
+      },
+      maxHeight: {
+        160: '40rem',
       },
       margin: {
         '1/4': '25%',
         '-1/2': '-50%',
         '-1/4': '-25%',
         '-1/8': '-12.5%',
+      },
+      lineHeight: {
+        12: '3rem',
+      },
+      flexGrow: {
+        '2/5': '40%',
+        '3/5': '60%',
       },
       zIndex: {
         '-1': -1,
@@ -69,12 +81,18 @@ module.exports = {
         'title-texture': 'url("/assets/bg_image/bg_title.png")',
         'map-texture': 'url("/assets/bg_image/bg_haveFun.jpg")',
         'location-texture': 'url("/assets/bg_image/bg_location.jpg")',
+        'line-texture': 'url("/assets/bg_image/line.png")',
       }),
+      boxShadow: {
+        location: '0 0 0 1px #fff, 0 0 10px 8px #fff',
+      },
     },
   },
   variants: {
     extend: {
       backgroundImage: ['hover', 'focus'],
+      boxShadow: ['hover'],
+      flexGrow: ['hover'],
     },
   },
   plugins: [

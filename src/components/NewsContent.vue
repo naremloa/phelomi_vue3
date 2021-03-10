@@ -8,16 +8,15 @@
       >
     </div>
     <div class="news-content md:pr-11 w-full h-full">
-      <div class="mb-4 md:pb-4">
-        <div class="text-3xl text-secondary break-all">
-          {{ title }}
-        </div>
-      </div>
-      <div class="mt-1 mb-2">
+      <Title>{{ title }}</Title>
+      <div class="mt-1 mb-2 tracking-widest overflow-ellipsis whitespace-nowrap">
         {{ content }}
       </div>
-      <div class="text-center">
-        <button class="h-9 w-28 bg-primary text-white rounded-2xl shadow-md">
+      <div class="">
+        <button
+          class="h-9 w-28 bg-primary text-white rounded-2xl shadow-md"
+          @click="$router.push({ name: 'News', params: { id } })"
+        >
           MORE
         </button>
       </div>
@@ -25,8 +24,11 @@
   </div>
 </template>
 <script>
+import Title from '@/components/Title.vue';
+
 export default {
   name: 'NewsContent',
+  components: { Title },
   props: {
     img: {
       type: String,
@@ -39,6 +41,10 @@ export default {
     content: {
       type: String,
       default: '',
+    },
+    id: {
+      type: String,
+      required: true,
     },
   },
 };

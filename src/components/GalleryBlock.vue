@@ -15,7 +15,7 @@
 </template>
 <script>
 import { ref, onMounted } from 'vue';
-import data from '@/data/banner';
+import data from '@/data/bannerData';
 import { ImageSwiper } from './Swiper';
 import GalleryImg from './GalleryImg.vue';
 
