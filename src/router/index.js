@@ -32,6 +32,16 @@ const routes = [
     component: () => import('@/views/news.vue'),
   },
   {
+    path: '/follow/:id',
+    name: 'Follow',
+    component: () => import('@/views/follow.vue'),
+  },
+  {
+    path: '/location',
+    name: 'Location',
+    component: () => import('@/views/location.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     redirect: '/',
   },

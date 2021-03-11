@@ -1,9 +1,10 @@
 <template>
   <div
-    class="rounded-2xl pt-3 pb-4 px-8 w-52 relative
+    class="rounded-2xl pt-3 pb-4 px-8 w-52 relative cursor-pointer
       hover:shadow-location"
     @mouseover="handleFocus"
     @mouseleave="handleBlur"
+    @click="handleClick"
   >
     <img
       v-if="img"
@@ -23,6 +24,7 @@
 </template>
 <script>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default {
   name: 'LocationItem',
@@ -42,12 +44,17 @@ export default {
   },
   setup() {
     const activeShow = ref(false);
+    const router = useRouter();
     const handleFocus = () => { activeShow.value = true; };
     const handleBlur = () => { activeShow.value = false; };
+    const handleClick = () => {
+      router.push({ name: 'Location' });
+    };
     return {
       activeShow,
       handleFocus,
       handleBlur,
+      handleClick,
     };
   },
 };

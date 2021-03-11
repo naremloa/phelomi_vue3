@@ -64,6 +64,7 @@ module.exports = {
       },
       lineHeight: {
         12: '3rem',
+        13: '3.25rem',
       },
       flexGrow: {
         '2/5': '40%',
