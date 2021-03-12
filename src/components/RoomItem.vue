@@ -51,6 +51,10 @@ import star from '@/assets/bg_image/icon_star.svg';
 export default {
   name: 'RoomItem',
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -66,7 +70,7 @@ export default {
   },
   setup(props) {
     const router = useRouter();
-    const { name } = toRefs(props);
+    const { id } = toRefs(props);
     const focus = ref(false);
     const handleFocus = () => {
       focus.value = true;
@@ -77,7 +81,7 @@ export default {
     const handleClick = () => {
       router.push({
         name: 'Room',
-        params: { id: name.value },
+        params: { id: id.value },
       });
     };
     return {

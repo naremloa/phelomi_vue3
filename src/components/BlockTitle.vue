@@ -4,7 +4,7 @@
     flex justify-end md:justify-start "
   >
     <div>
-      <div class="flex items-end h-16 bg-title-texture bg-cover bg-right">
+      <div class="flex items-end h-16 bg-title-texture bg-contain bg-no-repeat bg-right-bottom">
         <div class="text-4xl pl-6 pr-3 pb-1">
           {{ zh }}
         </div>

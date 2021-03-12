@@ -39,10 +39,13 @@ module.exports = {
       },
       minWidth: {
         30: '7.5rem',
+        '4/5': '80%',
+        '1/5': '20%',
       },
       maxWidth: {
         '1/2': '50%',
         '1/3': '33.33%',
+        '1/4': '25%',
       },
       height: {
         96: '24rem',
@@ -65,6 +68,7 @@ module.exports = {
       lineHeight: {
         12: '3rem',
         13: '3.25rem',
+        15: '3.75rem',
       },
       flexGrow: {
         '2/5': '40%',

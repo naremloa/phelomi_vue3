@@ -18,7 +18,7 @@ export default {
   setup() {
     return {
       options: roomsData
-        .map(({ short = {} }) => short),
+        .map(({ short = {}, id, name } = {}) => ({ ...short, id, name })),
     };
   },
 };
