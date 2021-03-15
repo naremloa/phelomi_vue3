@@ -4,7 +4,7 @@
     :options="roomOptions"
   >
     <template #default="row">
-      <div class="flex flex-col md:flex-row items-center">
+      <div class="flex flex-col md:flex-row items-start">
         <div
           v-for="(item, iIdx) in row"
           :key="iIdx"

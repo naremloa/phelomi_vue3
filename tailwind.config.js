@@ -43,6 +43,7 @@ module.exports = {
         '1/5': '20%',
       },
       maxWidth: {
+        28: '7rem',
         '1/2': '50%',
         '1/3': '33.33%',
         '1/4': '25%',
@@ -90,6 +91,9 @@ module.exports = {
       }),
       boxShadow: {
         location: '0 0 0 1px #fff, 0 0 10px 8px #fff',
+      },
+      borderWidth: {
+        1: '1px',
       },
     },
   },

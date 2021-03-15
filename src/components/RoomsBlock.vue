@@ -1,7 +1,7 @@
 <template>
   <block
     id="RoomsBlock"
-    class=""
+    class=" bg-accent"
     :title="blockTitle"
   >
     <rooms-list />

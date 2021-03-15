@@ -45,7 +45,8 @@
                   :key="`icon-${iconIdx}`"
                   class="max-w-1/4 w-1/4 text-sm"
                 >
-                  {{ icon }}
+                  <room-icon :type="icon" />
+                  <!-- {{ icon }} -->
                 </div>
               </div>
             </div>
@@ -67,8 +68,10 @@
               <li
                 v-for="(rule, rIdx) in liveRule"
                 :key="`live-rule-${rIdx}`"
+                class="flex items-stretch"
               >
-                {{ rule }}
+                <span>·</span>
+                <span class="pl-2">{{ rule }}</span>
               </li>
             </ul>
             <p class="mb-2">
@@ -90,8 +93,10 @@
               <li
                 v-for="(item, uIdx) in unsubscribe"
                 :key="`unsubscribe-${uIdx}`"
+                class="flex items-stretch"
               >
-                {{ item }}
+                <span>·</span>
+                <span class="pl-2">{{ item }}</span>
               </li>
             </ul>
           </div>
@@ -125,10 +130,14 @@ import {
 import roomsData from '@/data/roomsData';
 import { ContentSwiper } from '@/components/Swiper';
 import BlockTitle from '@/components/BlockTitle.vue';
+import RoomsList from '@/components/RoomsList.vue';
+import RoomIcon from '@/components/RoomIcon.vue';
 
 export default {
   name: 'Room',
-  components: { ContentSwiper, BlockTitle },
+  components: {
+    ContentSwiper, BlockTitle, RoomsList, RoomIcon,
+  },
   beforeRouteEnter(to, from, next) {
     if (to.params?.id
       && roomsData.find(({ id }) => id === to.params.id)) {

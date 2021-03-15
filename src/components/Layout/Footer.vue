@@ -4,16 +4,47 @@
     class="footer w-full flex flex-col justify-end -mt-24"
   >
     <div class="bg-footer-info-texture bg-cover bg-top h-96">
-      <div class="pt-20 flex items-center flex-col">
-        <div class="w-65 h-44 flex">
-          <div class="w-2/5 flex justify-center">
+      <div class="pt-32 flex items-center flex-col">
+        <div class="flex w-full">
+          <div
+            class="flex justify-end pr-10 w-1/2
+            border-r-1 border-secondary h-44"
+          >
             <img
-              class="w-20 h-28"
+              class="w-30 object-contain"
               :src="logoVertical"
             >
           </div>
-          <div class="w-3/5 px-5">
-            right
+          <div class="flex flex-col pl-10 text-xs text-secondary w-1/2">
+            <contact-item :img="iconPhone">
+              (06)995-3288
+            </contact-item>
+            <contact-item :img="iconPhone">
+              0967-229-968
+            </contact-item>
+            <contact-item :img="iconEmail">
+              2019starrysky@gmail.com
+            </contact-item>
+            <contact-item
+              class="tracking-widest"
+              :img="iconAddress"
+            >
+              澎湖縣馬公市山水里珠江182號
+            </contact-item>
+            <div class="flex mt-2 ml-2">
+              <long-social-btn
+                class="flex-grow mr-2"
+                :img="iconWechat"
+              >
+                微信加入好友
+              </long-social-btn>
+              <long-social-btn
+                class="flex-grow mr-2"
+                :img="iconLine"
+              >
+                LINE 加入好友
+              </long-social-btn>
+            </div>
           </div>
         </div>
         <div class="flex w-36 h-7 mt-5 mb-2">
@@ -31,6 +62,13 @@
   </div>
 </template>
 <script>
+import ContactItem from '@/components/Layout/components/ContactItem.vue';
+import LongSocialBtn from '@/components/LongSocialBtn.vue';
+import iconEmail from '@/assets/contact/icon_email.svg';
+import iconPhone from '@/assets/contact/icon_phone.svg';
+import iconAddress from '@/assets/contact/icon_address.svg';
+import iconLine from '@/assets/contact/icon_white_line.svg';
+import iconWechat from '@/assets/contact/icon_white_wechat.svg';
 import logoVertical from '../../assets/logo/logo_vertical.svg';
 import SocialBtnFacebook from './components/SocialBtnFacebook.vue';
 import SocialBtnInstagram from './components/SocialBtnInstagram.vue';
@@ -39,11 +77,21 @@ import SocialBtnWechat from './components/SocialBtnWechat.vue';
 
 export default {
   components: {
-    SocialBtnFacebook, SocialBtnInstagram, SocialBtnLine, SocialBtnWechat,
+    SocialBtnFacebook,
+    SocialBtnInstagram,
+    SocialBtnLine,
+    SocialBtnWechat,
+    LongSocialBtn,
+    ContactItem,
   },
   setup() {
     return {
       logoVertical,
+      iconEmail,
+      iconPhone,
+      iconAddress,
+      iconLine,
+      iconWechat,
     };
   },
 };
