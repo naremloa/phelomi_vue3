@@ -1,24 +1,31 @@
 <template>
   <div
     class="block-title text-primary w-full h-32 md:pl-16 font-bold
-    flex justify-end md:justify-start "
+    flex md:justify-start
+    mb-4 md:mb-0"
   >
     <div
-      class=""
-      style="letter-spacing: .75em"
+      class="tracking-wider md:tracking-infinity w-full md:w-auto"
     >
       <div
         class="flex items-end h-20
         bg-title-texture bg-cover bg-no-repeat bg-right-bottom"
       >
-        <div class="text-4xl pl-6 pr-3 pb-1 mb-1">
+        <div
+          class="pr-3 pb-1 mb-1
+          text-3xl md:text-4xl
+          pl-3 md:pl-6"
+        >
           {{ zh }}
         </div>
         <div class="w-18 h-20">
           <!-- <img :src="titleLogo"> -->
         </div>
       </div>
-      <div class="text-2xl pt-1 flex items-start">
+      <div
+        class="pt-1 flex items-start
+        text-xl md:text-2xl "
+      >
         <div class="pl-3">
           {{ en }}
         </div>

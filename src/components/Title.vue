@@ -1,7 +1,9 @@
 <template>
   <div
-    class="pb-4 mb-4 text-4xl font-bold text-secondary tracking-widest leading-12
-      bg-line-texture bg-repeat-x bg-bottom bg-auto"
+    class="pb-4 mb-4 font-bold text-secondary tracking-widest
+      bg-line-texture bg-repeat-x bg-bottom bg-auto
+      text-2xl md:text-4xl
+      leading-8 md:leading-12"
     style="background-size: 2.29vw 0.93vw;"
   >
     <template v-if="title">

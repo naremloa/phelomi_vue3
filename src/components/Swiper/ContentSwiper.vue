@@ -2,16 +2,17 @@
   <div class="h-full w-full relative">
     <div
       class="absolute inset-y-1/2 z-10 transform -translate-y-1/2
-      rounded-full bg-primary h-7 w-7 flex justify-center items-center"
+      rounded-full bg-primary flex justify-center items-center
+      h-4 md:h-7 w-4 md:w-7 "
       :class="navigationClassName"
       @click="onClickPrev"
     >
       <svg-icon
-        class="flex-shrink-0"
         :path="mdiChevronLeft"
         :height="40"
         :width="40"
         fill="#fff"
+        style="flex-shrink: 0.5"
       />
     </div>
     <swiper
@@ -25,23 +26,24 @@
       <swiper-slide
         v-for="(option, optionIdx) in options"
         :key="`slide-${optionIdx}`"
-        class="px-8"
+        class="px-5 md:px-8"
       >
         <slot v-bind="option" />
       </swiper-slide>
     </swiper>
     <div
       class="absolute inset-y-1/2 right-0 z-10 transform -translate-y-1/2
-      rounded-full bg-primary h-7 w-7 flex justify-center items-center"
+      rounded-full bg-primary flex justify-center items-center
+      h-4 md:h-7 w-4 md:w-7"
       :class="navigationClassName"
       @click="onClickNext"
     >
       <svg-icon
-        class="flex-shrink-0"
         :path="mdiChevronRight"
         :height="40"
         :width="40"
         fill="#fff"
+        style="flex-shrink: 0.5"
       />
     </div>
   </div>

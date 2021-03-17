@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 mb-24">
+  <div class="p-3 md:p-6 mb-24">
     <block-title v-bind="pageTitle" />
     <template v-if="imgOptions && imgOptions.length">
       <content-swiper :options="imgOptions">
@@ -10,11 +10,12 @@
         </template>
       </content-swiper>
     </template>
-    <div class="flex px-20 py-12">
-      <div class="w-3/4">
+    <div class="flex md:px-20 py-12">
+      <div class="w-full md:w-3/4">
         <div
           class="inline-block text-3xl text-white tracking-widest
-          bg-secondary rounded-lg px-3 py-3 mb-10"
+          bg-secondary rounded-lg px-3 py-3
+          mb-5 md:mb-10"
         >
           房間介紹
         </div>
@@ -43,7 +44,7 @@
                 <div
                   v-for="(icon, iconIdx) in iconItem.icon"
                   :key="`icon-${iconIdx}`"
-                  class="max-w-1/4 w-1/4 text-sm"
+                  class="max-w-1/2 w-1/2 md:max-w-1/4 md:w-1/4 text-sm"
                 >
                   <room-icon :type="icon" />
                   <!-- {{ icon }} -->
@@ -56,7 +57,8 @@
         <template v-if="liveNotice && end && liveRule && liveRule.length">
           <div
             class="inline-block text-3xl text-white tracking-widest
-          bg-info rounded-lg px-3 py-3 mb-10"
+          bg-info rounded-lg px-3 py-3
+            mb-5 md:mb-10"
           >
             住房須知
           </div>
@@ -90,7 +92,8 @@
         <template v-if="unsubscribe && unsubscribe.length">
           <div
             class="inline-block text-3xl text-white tracking-widest
-          bg-warning rounded-lg px-3 py-3 mb-10"
+          bg-warning rounded-lg px-3 py-3
+            mb-5 md:mb-10"
           >
             退訂政策
           </div>
@@ -114,7 +117,7 @@
           </div>
         </template>
       </div>
-      <div class="w-1/4">
+      <div class="w-1/4 hidden md:block">
         <a
           class="inline-block bg-error rounded-full"
           href="https://google.com"

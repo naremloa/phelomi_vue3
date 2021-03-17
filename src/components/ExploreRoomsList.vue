@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-6">
+  <div class="md:mx-6">
     <title-with-line
-      class="mb-8 px-9"
+      class="mb-4 md:mb-8 md:px-9"
       title="探索房型"
     />
     <rooms-list />

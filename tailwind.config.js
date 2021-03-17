@@ -17,6 +17,7 @@ module.exports = {
       normal: '0',
       wider: '.05em',
       widest: '.25em',
+      infinity: '.75em',
     },
 
     extend: {

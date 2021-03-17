@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-2 cursor-pointer"
+    class="md:px-2 cursor-pointer"
     @mouseover="handleFocus"
     @mouseleave="handleBlur"
     @click="handleClick "
@@ -8,22 +8,31 @@
     <div class="w-full h-52 relative">
       <img
         v-if="img"
-        class="w-full h-full"
+        class="object-cover w-full h-full"
         :src="img"
       >
       <div
         v-show="focus"
-        class="w-full h-52 bg-gray-800 top-0 left-0 absolute bg-opacity-60"
-      />
+        class="w-full h-52 bg-gray-800 top-0 left-0 absolute bg-opacity-60
+        flex justify-center items-center"
+      >
+        <div class=" w-1/2 h-2/3">
+          <img
+            class="w-full h-full object-contains"
+            :src="activeStar"
+          >
+        </div>
+      </div>
     </div>
     <div class="flex">
       <img
-        class="w-3 h-3 mt-2"
+        class="w-3 h-3 mt-2
+        hidden md:block"
         :src="star"
       >
-      <div class="px-6">
+      <div class="md:px-6">
         <div
-          class="w-full whitespace-nowrap
+          class="w-full
             text-2xl text-center text-primary font-bold
             py-1 border-solid border-b border-primary"
         >
@@ -37,7 +46,8 @@
         </div>
       </div>
       <img
-        class="w-3 h-3 mt-2"
+        class="w-3 h-3 mt-2
+        hidden md:block"
         :src="star"
       >
     </div>
@@ -47,6 +57,7 @@
 import { ref, toRefs } from 'vue';
 import { useRouter } from 'vue-router';
 import star from '@/assets/bg_image/icon_star.svg';
+import activeStar from '@/assets/button/button_rooms_active.svg';
 
 export default {
   name: 'RoomItem',
@@ -90,6 +101,7 @@ export default {
       handleFocus,
       handleBlur,
       handleClick,
+      activeStar,
     };
   },
 };

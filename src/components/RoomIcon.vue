@@ -1,7 +1,10 @@
 <template>
-  <div class="flex items-center text-textGray tracking-wider h-6 pb-1">
+  <div class="flex items-start text-textGray tracking-wider min-h-6 pb-1">
     <template v-if="item.icon">
-      <div class="mr-1">
+      <div
+        class="mr-1"
+        style="margin-top: 2px"
+      >
         <svg-icon
           v-if="item.svg"
           :path="item.icon"

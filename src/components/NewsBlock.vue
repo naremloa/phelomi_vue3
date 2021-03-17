@@ -6,7 +6,7 @@
   >
     <content-swiper :options="newsOptions">
       <template #default="data">
-        <div class="h-full grid grid-row2 gap-4">
+        <div class="flex flex-col items-start">
           <news-content v-bind="data[0]" />
           <news-content v-bind="data[1]" />
         </div>
