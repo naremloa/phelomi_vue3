@@ -1,32 +1,15 @@
 <template>
-  <div class="flex items-center">
+  <div class="flex items-center text-textGray tracking-wider h-6 pb-1">
     <template v-if="item.icon">
-      <!-- <img
-        class="mr-2"
-        :src="item.icon"
-      > -->
-      <!-- <svg
-        height="24"
-        width="24"
-      >
-        <path :d="item.icon" />
-      </svg> -->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        height="24"
-        width="24"
-        role="img"
-        aria-hidden="true"
-      >
-        <path :d="item.icon" />
-      </svg>
-      <!-- <svg
-        height="210"
-        width="400"
-      >
-        <path d="M150 0 L75 200 L225 200 Z" />
-      </svg> -->
+      <div class="mr-1">
+        <svg-icon
+          v-if="item.svg"
+          :path="item.icon"
+          :height="17"
+          :width="17"
+          fill="rgba(0, 0, 0, .54)"
+        />
+      </div>
     </template>
     {{ item.text }}
   </div>
@@ -34,9 +17,11 @@
 <script>
 import { computed, toRefs } from 'vue';
 import specifyIcon from '@/utils/specifyIcon';
+import SvgIcon from './SvgIcon.vue';
 
 export default {
   name: 'RoomIcon',
+  components: { SvgIcon },
   props: {
     type: {
       type: String,
@@ -44,16 +29,17 @@ export default {
     },
   },
   setup(props) {
+    const isSvgPath = (path) => /^[mzlhvcsqta]\s*[-+.0-9][^mlhvzcsqta]+/i.test(path)
+      && /[\dz]$/i.test(path) && path.length > 4;
     const { type } = toRefs(props);
     const item = computed(() => {
       if (type && specifyIcon[type.value]) {
         const { icon, text } = specifyIcon[type.value];
-        console.log('check item', icon, text);
-        return { icon, text };
+        return { icon, text, svg: isSvgPath(icon) };
       }
       const text = '';
       const icon = type || '';
-      return { icon, text };
+      return { icon, text, svg: isSvgPath(icon) };
     });
     return {
       item,

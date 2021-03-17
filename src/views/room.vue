@@ -39,7 +39,7 @@
               <div class="text-lg mb-2">
                 {{ iconItem && iconItem.title }}
               </div>
-              <div class="flex flex-wrap">
+              <div class="flex flex-wrap pl-2">
                 <div
                   v-for="(icon, iconIdx) in iconItem.icon"
                   :key="`icon-${iconIdx}`"
@@ -70,8 +70,14 @@
                 :key="`live-rule-${rIdx}`"
                 class="flex items-stretch"
               >
-                <span>·</span>
-                <span class="pl-2">{{ rule }}</span>
+                <span style="padding-top: 11px;">
+                  <svg-icon
+                    :path="mdiCheckboxBlankCircle"
+                    :height="10"
+                    :width="10"
+                  />
+                </span>
+                <span class="pl-3">{{ rule }}</span>
               </li>
             </ul>
             <p class="mb-2">
@@ -95,8 +101,14 @@
                 :key="`unsubscribe-${uIdx}`"
                 class="flex items-stretch"
               >
-                <span>·</span>
-                <span class="pl-2">{{ item }}</span>
+                <span style="padding-top: 11px;">
+                  <svg-icon
+                    :path="mdiCheckboxBlankCircle"
+                    :height="10"
+                    :width="10"
+                  />
+                </span>
+                <span class="pl-3">{{ item }}</span>
               </li>
             </ul>
           </div>
@@ -117,8 +129,7 @@
         </a>
       </div>
     </div>
-    <div>探索房型</div>
-    <rooms-list />
+    <explore-rooms-list />
   </div>
 </template>
 <script>
@@ -130,13 +141,19 @@ import {
 import roomsData from '@/data/roomsData';
 import { ContentSwiper } from '@/components/Swiper';
 import BlockTitle from '@/components/BlockTitle.vue';
-import RoomsList from '@/components/RoomsList.vue';
 import RoomIcon from '@/components/RoomIcon.vue';
+import { mdiCheckboxBlankCircle } from '@mdi/js';
+import SvgIcon from '@/components/SvgIcon.vue';
+import ExploreRoomsList from '@/components/ExploreRoomsList.vue';
 
 export default {
   name: 'Room',
   components: {
-    ContentSwiper, BlockTitle, RoomsList, RoomIcon,
+    ContentSwiper,
+    BlockTitle,
+    RoomIcon,
+    SvgIcon,
+    ExploreRoomsList,
   },
   beforeRouteEnter(to, from, next) {
     if (to.params?.id
@@ -162,6 +179,7 @@ export default {
       en: `ROOMS_${description}`,
     };
     return {
+      mdiCheckboxBlankCircle,
       pageTitle,
       imgOptions,
       title,

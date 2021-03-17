@@ -25,6 +25,7 @@ module.exports = {
         secondary: '#142952',
         accent: '#C4E4EE',
         textBlack: '#231815',
+        textGray: 'rgba(0, 0, 0, 0.87)',
         error: '#E96143',
         info: '#41BBD6',
         success: '#94BF80',

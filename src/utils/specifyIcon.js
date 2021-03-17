@@ -9,13 +9,40 @@ import {
   mdiPhoneClassic,
   mdiSeatReclineNormal,
   mdiAirConditioner,
+  mdiTelevisionClassic,
+  mdiTelevisionGuide,
+  mdiShoeFormal,
+  mdiRouterWireless,
+  mdiTooth,
+  mdiCropSquare,
+  mdiBuffer,
+  mdiGasCylinder,
+  mdiHockeyPuck,
+  mdiFan,
+  mdiCurling,
+  mdiToilet,
+  mdiSquare,
+  mdiFridge,
+  mdiBottleWine,
+  mdiKettle,
+  mdiBriefcase,
+  mdiElevator,
+  mdiCar,
+  mdiWashingMachine,
+  mdiFood,
+  mdiParking,
+  mdiStairs,
+  mdiMotorbike,
+  mdiBabyBuggy,
+  mdiAccountGroup,
+  mdiTicket,
+  mdiSmokeDetector,
+  mdiCctv,
+  mdiAlarmLight,
+  mdiFireTruck,
+  mdiMedicalBag,
+  mdiBullhorn,
 } from '@mdi/js';
-
-// import mdiHomeVariant from '@mdi/svg/svg/home-variant.svg';
-// import mdiSeatIndividualSuite from '@mdi/svg/svg/seat-individual-suite.svg';
-// import homeVariant from '@mdi/svg/svg/home-variant.svg';
-// import homeVariant from '@mdi/svg/svg/home-variant.svg';
-// import homeVariant from '@mdi/svg/svg/home-variant.svg';
 
 export default {
   home: {
@@ -31,167 +58,167 @@ export default {
     text: '加大雙人床*2',
   },
   smokingOff: {
-    icon: 'smoking-off',
+    icon: mdiSmokingOff,
     text: '禁菸房',
   },
   shower: {
-    icon: 'shower',
+    icon: mdiShower,
     text: '獨立衛浴',
   },
   wifi: {
-    icon: 'wifi',
+    icon: mdiWifi,
     text: '無線網路',
   },
   face: {
-    icon: 'face',
+    icon: mdiFace,
     text: '鏡子',
   },
   hanger: {
-    icon: 'hanger',
+    icon: mdiHanger,
     text: '衣架',
   },
   phone: {
-    icon: 'phone-classic',
+    icon: mdiPhoneClassic,
     text: '電話',
   },
   seat: {
-    icon: 'seat-recline-normal',
+    icon: mdiSeatReclineNormal,
     text: '椅子',
   },
   air: {
-    icon: 'air-conditioner',
+    icon: mdiAirConditioner,
     text: '冷氣',
   },
   tv: {
-    icon: 'television-classic',
+    icon: mdiTelevisionClassic,
     text: '電視',
   },
   tvGuide: {
-    icon: 'television-guide',
+    icon: mdiTelevisionGuide,
     text: '多頻道智能電視盒',
   },
   shoe: {
-    icon: 'shoe-formal',
+    icon: mdiShoeFormal,
     text: '室內拖鞋',
   },
   router: {
-    icon: 'router-wireless',
+    icon: mdiRouterWireless,
     text: '路由器',
   },
   tooth: {
-    icon: 'tooth',
+    icon: mdiTooth,
     text: '牙膏、牙刷',
   },
   crop: {
-    icon: 'crop-square',
+    icon: mdiCropSquare,
     text: '浴巾',
   },
   buffer: {
-    icon: 'buffer',
+    icon: mdiBuffer,
     text: '毛巾',
   },
   gas: {
-    icon: 'gas-cylinder',
+    icon: mdiGasCylinder,
     text: '洗髮精',
   },
   hockey: {
-    icon: 'hockey-puck',
+    icon: mdiHockeyPuck,
     text: '沐浴乳',
   },
   fan: {
-    icon: 'fan',
+    icon: mdiFan,
     text: '吹風機',
   },
   curling: {
-    icon: 'curling',
+    icon: mdiCurling,
     text: '衛生紙',
   },
   toilet: {
-    icon: 'toilet',
+    icon: mdiToilet,
     text: '乾溼分離',
   },
   square: {
-    icon: 'square',
+    icon: mdiSquare,
     text: '防滑地墊',
   },
   fridge: {
-    icon: 'fridge',
+    icon: mdiFridge,
     text: '冰箱',
   },
   bottle: {
-    icon: 'bottle-wine',
+    icon: mdiBottleWine,
     text: '免費瓶裝水',
   },
   kettle: {
-    icon: 'kettle',
+    icon: mdiKettle,
     text: '快速燒水壺',
   },
   briefcase: {
-    icon: 'briefcase',
+    icon: mdiBriefcase,
     text: '行李寄放(免費)',
   },
   elevator: {
-    icon: 'elevator',
+    icon: mdiElevator,
     text: '有電梯',
   },
   car: {
-    icon: 'car',
+    icon: mdiCar,
     text: '機場接送(免費)',
   },
   washing: {
-    icon: 'washing-machine',
+    icon: mdiWashingMachine,
     text: '自助洗衣免費',
   },
   food: {
-    icon: 'food',
+    icon: mdiFood,
     text: '餐飲服務',
   },
   parking: {
-    icon: 'parking',
+    icon: mdiParking,
     text: 'P停車免費',
   },
   stairs: {
-    icon: 'stairs',
+    icon: mdiStairs,
     text: '需上下樓梯',
   },
   motorbike: {
-    icon: 'motorbike',
+    icon: mdiMotorbike,
     text: '機車免費',
   },
   baby: {
-    icon: 'baby-buggy',
+    icon: mdiBabyBuggy,
     text: '親子友善',
   },
   account: {
-    icon: 'account-group',
+    icon: mdiAccountGroup,
     text: '交誼廳',
   },
   ticket: {
-    icon: 'ticket',
+    icon: mdiTicket,
     text: '代售旅遊票劵',
   },
   smoke: {
-    icon: 'smoke-detector',
+    icon: mdiSmokeDetector,
     text: '煙霧偵測器',
   },
   cctv: {
-    icon: 'cctv',
+    icon: mdiCctv,
     text: 'CCTV',
   },
   light: {
-    icon: 'alarm-light',
+    icon: mdiAlarmLight,
     text: '緊急照明燈',
   },
   fire: {
-    icon: 'fire-truck',
+    icon: mdiFireTruck,
     text: '滅火器',
   },
   medical: {
-    icon: 'medical-bag',
+    icon: mdiMedicalBag,
     text: '醫藥箱',
   },
   bullhorn: {
-    icon: 'bullhorn',
+    icon: mdiBullhorn,
     text: '警報器',
   },
 };

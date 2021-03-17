@@ -17,15 +17,14 @@
         </p>
       </div>
     </block>
-    <div>探索房型</div>
-    <rooms-list />
+    <explore-rooms-list />
   </div>
 </template>
 <script>
 import newsData from '@/data/newsData';
 import Block from '@/components/Block.vue';
 import Title from '@/components/Title.vue';
-import RoomsList from '@/components/RoomsList.vue';
+import ExploreRoomsList from '@/components/ExploreRoomsList.vue';
 import { useRoute } from 'vue-router';
 
 const blockTitle = {
@@ -36,7 +35,7 @@ const blockTitle = {
 export default {
   name: 'News',
   components: {
-    Block, RoomsList, Title,
+    Block, ExploreRoomsList, Title,
   },
   setup() {
     const route = useRoute();
