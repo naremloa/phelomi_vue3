@@ -1,13 +1,13 @@
 <template>
   <div class="news-content flex md:px-6 md:pb-4 flex-col md:flex-row items-center">
-    <div class="news-image w-full md:w-2/5 h-full md:mx-12 max-w-xs">
+    <div class="news-image w-full md:w-2/5 h-full md:pr-12 md:pl-6 flex-grow">
       <img
         v-if="img"
         class="h-full w-full object-contain object-top"
         :src="img"
       >
     </div>
-    <div class="news-content md:pr-11 w-full h-full">
+    <div class="news-content md:pr-11 w-full md:w-3/5 h-full flex-grow">
       <Title>{{ title }}</Title>
       <div class="mt-1 mb-2 tracking-widest overflow-ellipsis whitespace-nowrap">
         {{ content }}

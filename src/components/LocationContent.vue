@@ -1,17 +1,17 @@
 <template>
-  <div class="location-content flex mb-20 pl-20">
+  <div class="location-content flex mb-20 pl-16">
     <div class="w-3/5">
       <Title class="w-5/6">
         <div class="flex items-end">
-          <div
-            v-if="titleImg"
-            class="w-32 max-h-28"
-          >
-            <img :src="titleImg">
-          </div>
-          <div class="text-primary">
-            {{ title }}
-          </div>
+        <div
+        v-if="titleImg"
+        class="w-32 max-h-28"
+        >
+        <img :src="titleImg">
+        </div>
+        <div class="text-primary">
+        {{ title }}
+        </div>
         </div>
       </Title>
       <div class="my-6">
