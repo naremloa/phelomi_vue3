@@ -3,17 +3,20 @@
     id="ArticlesBlock"
     :title="blockTitle"
   >
-    <div class="w-full h-60  grid grid-cols-10 grid-rows-4">
+    <div
+      class="w-full flex items-center justify-around
+      flex-col md:flex-row"
+    >
       <div
-        class="bg-black row-start-2 row-end-5 col-start-2 col-end-4"
+        class="bg-black w-1/4 h-32 mb-5"
         @click="$router.push({ name: 'Follow', params: { id: 'followA' } })"
       />
       <div
-        class="bg-black row-start-2 row-end-5 col-start-5 col-end-7"
+        class="bg-black w-1/4 h-32 mb-5"
         @click="$router.push({ name: 'Follow', params: { id: 'followB' } })"
       />
       <div
-        class="bg-black row-start-2 row-end-5 col-start-8 col-end-10"
+        class="bg-black w-1/4 h-32 mb-5"
         @click="$router.push({ name: 'Follow', params: { id: 'followC' } })"
       />
     </div>

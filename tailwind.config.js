@@ -99,6 +99,9 @@ module.exports = {
       borderWidth: {
         1: '1px',
       },
+      fontSize: {
+        tiny: '.5rem',
+      },
     },
   },
   variants: {

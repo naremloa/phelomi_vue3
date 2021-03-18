@@ -3,19 +3,20 @@
     id="Footer"
     class="footer w-full flex flex-col justify-end -mt-24"
   >
-    <div class="bg-footer-info-texture bg-cover bg-top h-96">
+    <div class="bg-footer-info-texture bg-cover bg-top">
       <div class="pt-32 flex items-center flex-col">
         <div class="flex w-full">
           <div
-            class="flex justify-end pr-10 w-1/2
-            border-r-1 border-secondary h-44"
+            class="justify-end pr-10 w-1/2
+            border-r-1 border-secondary h-44
+            hidden md:flex"
           >
             <img
               class="w-30 object-contain"
               :src="logoVertical"
             >
           </div>
-          <div class="flex flex-col pl-10 text-xs text-secondary w-1/2">
+          <div class="flex flex-col pl-10 text-xs text-secondary w-full md:w-1/2">
             <contact-item :img="iconPhone">
               (06)995-3288
             </contact-item>
@@ -53,7 +54,12 @@
           <social-btn-wechat />
           <social-btn-instagram />
         </div>
-        <div class="text-center text-xs w-96">
+        <div
+          class="text-center
+          text-tiny md:text-xs
+          w-full md:w-96
+          px-3 md:px-0 "
+        >
           © 2019 Family Starry Sky Co., Ltd. All rights reserved. 飛樂米星空號有限公司 版權所有
           Design by 方蘋果數位行銷設計有限公司
         </div>
