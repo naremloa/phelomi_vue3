@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-24">
+  <div class="p-3 md:p-6 mb-24">
     <block :title="blockTitle">
       <div class="px-8">
         <div class="object-contain w-full mb-12">

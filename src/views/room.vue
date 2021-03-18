@@ -1,8 +1,8 @@
 <template>
   <div class="p-3 md:p-6 mb-24">
     <block-title v-bind="pageTitle" />
-    <template v-if="imgOptions && imgOptions.length">
-      <content-swiper :options="imgOptions">
+    <template v-if="room.imgOptions && room.imgOptions.length">
+      <content-swiper :options="room.imgOptions">
         <template #default="item">
           <div>
             <img :src="item">
@@ -20,9 +20,9 @@
           房間介紹
         </div>
         <!-- 房間信息 -->
-        <template v-if="info && info.length">
+        <template v-if="room.info && room.info.length">
           <div
-            v-for="(infoItem, iIdx) in info"
+            v-for="(infoItem, iIdx) in room.info"
             :key="`info-${iIdx}`"
             class="tracking-widest mb-2"
           >
@@ -30,10 +30,10 @@
           </div>
         </template>
         <!-- 房間服務 icon -->
-        <template v-if="iconList && iconList.length">
+        <template v-if="room.iconList && room.iconList.length">
           <div class="mb-10">
             <div
-              v-for="(iconItem, iIdx) in iconList"
+              v-for="(iconItem, iIdx) in room.iconList"
               :key="`icon-item-${iIdx}`"
               class="mt-4 tracking-widest"
             >
@@ -136,7 +136,8 @@
   </div>
 </template>
 <script>
-import { useRoute } from 'vue-router';
+import { useRoute, onBeforeRouteUpdate } from 'vue-router';
+import { computed, ref } from 'vue';
 import {
   roomIntro,
   roomsCategory,
@@ -165,30 +166,35 @@ export default {
     } else next({ name: 'Home' });
   },
   setup() {
-    const { params: { id } = {} } = useRoute();
-    const room = roomsData.find(({ id: roomId }) => roomId === id);
-    if (!room) return {};
-    const {
-      description = '', imgOptions = [],
-    } = room || {};
+    const { params: { id: roomId } = {} } = useRoute();
+    const id = ref(roomId);
+    const room = computed(() => {
+      const roomData = roomsData.find(({ id: rId }) => rId === id.value);
+      if (!roomData) return {};
+      const {
+        description = '', imgOptions = [],
+      } = roomData || {};
+      const {
+        title = '', info = [], iconList = [],
+      } = roomsCategory?.[roomData.type] || {};
+      return {
+        description, imgOptions, title, info, iconList,
+      };
+    });
+    const pageTitle = computed(() => ({
+      zh: room.value.title,
+      en: `ROOMS_${room.value.description}`,
+    }));
     const {
       end = '', liveNotice = '', liveRule = [], unsubscribe = [],
     } = roomIntro || {};
-    const {
-      title = '', info = [], iconList = [],
-    } = roomsCategory?.[room?.type] || {};
-    const pageTitle = {
-      zh: title,
-      en: `ROOMS_${description}`,
-    };
+    onBeforeRouteUpdate((to) => {
+      if (to.name === 'Room') { id.value = to.params.id; }
+    });
     return {
       mdiCheckboxBlankCircle,
       pageTitle,
-      imgOptions,
-      title,
-      description,
-      info,
-      iconList,
+      room,
       liveRule,
       liveNotice,
       unsubscribe,

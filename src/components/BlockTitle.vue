@@ -1,6 +1,6 @@
 <template>
   <div
-    class="block-title text-primary w-full h-32 md:pl-16 font-bold
+    class="block-title text-primary w-full h-32 px-3 md:pl-16 font-bold
     flex md:justify-start
     mb-4 md:mb-0"
   >
@@ -12,9 +12,10 @@
         bg-title-texture bg-cover bg-no-repeat bg-right-bottom"
       >
         <div
-          class="pr-3 pb-1 mb-1
+          class="pb-1 mb-1
           text-3xl md:text-4xl
-          pl-3 md:pl-6"
+          pl-0 md:pl-6
+          pr-0 md:pr-3"
         >
           {{ zh }}
         </div>

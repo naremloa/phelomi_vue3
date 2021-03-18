@@ -89,12 +89,14 @@ export default [
     distanceTitle: '班機資訊',
     distance: [
       {
+        type: 'short',
         title: '立榮航空',
         description: '航程約',
         num: '30~50',
         unit: '分鐘',
       },
       {
+        type: 'short',
         title: '華信航空',
         description: '航程約',
         num: '30~50',

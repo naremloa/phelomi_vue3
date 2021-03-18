@@ -4,7 +4,7 @@
     viewBox="0 0 24 24"
     role="img"
     aria-hidden="true"
-    v-bind="attrs"
+    v-bind="$attrs"
     :width="width"
     :height="height"
   >

@@ -1,11 +1,11 @@
 <template>
-  <div class="location-content flex mb-20 pl-16">
-    <div class="w-3/5">
-      <Title class="w-5/6">
+  <div class="location-content flex mb-20 md:pl-16">
+    <div class="w-full md:w-3/5">
+      <Title class="md:w-5/6">
         <div class="flex items-end">
         <div
         v-if="titleImg"
-        class="w-32 max-h-28"
+        class="w-32 max-h-28 hidden md:block"
         >
         <img :src="titleImg">
         </div>
@@ -36,10 +36,12 @@
           >
             <div class="text-primary font-bold text-xl flex items-center">
               <span
-                class="text-3xl border-2 box-border px-2 leading-10
-                border-solid border-primary rounded-xl"
+                class=" text-2xl md:text-3xl border-2 box-border px-2 leading-10
+                border-solid border-primary rounded-xl
+                md:max-w-max"
+                :class="item.type === 'short' ? 'max-w-17' : 'max-w-29'"
               >{{ item.title }}</span>
-              <span class="mx-2">{{ item.description }}</span>
+              <span class="text-base md:text-lg mx-2">{{ item.description }}</span>
               <span
                 class="bg-error rounded-full text-white leading-13 text-3xl text-center"
                 style="padding: 0 10px; min-width: 3.25rem"
@@ -52,7 +54,7 @@
         </template>
       </div>
     </div>
-    <div class="w-2/5">
+    <div class="w-2/5 hidden md:block">
       <img
         v-if="img"
         class="object-contain"

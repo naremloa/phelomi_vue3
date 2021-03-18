@@ -1,25 +1,23 @@
 <template>
-  <div class="mb-24 px-6 py-9">
+  <div class="p-3 md:p-6 mb-24">
     <block :title="blockTitle">
-      <div class="px-11 py-12">
+      <div class="md:px-11 py-6 md:py-12">
         <Title>{{ item.title }}</Title>
         <template v-if="item.article && item.article.length">
           <div
             v-for="(a, aIdx) in item.article"
             :key="`${item.id}-${aIdx}`"
-            class="flex mb-7"
+            class="flex mb-7 flex-col md:flex-row"
           >
-            <div
-              class="w-1/3 overflow-hidden"
-              style="max-height: 16vw;"
-            >
+            <!-- style="max-height: 16vw;" -->
+            <div class="md:w-1/3 overflow-hidden">
               <img
                 v-if="a.img"
                 :src="a.img"
                 class="h-full w-full"
               >
             </div>
-            <div class="w-2/3 pl-8 mb-10">
+            <div class="md:w-2/3 md:pl-8 mb-5 md:mb-10">
               <h4 class="font-bold tracking-widest text-lg">
                 ・{{ a.title }}
               </h4>
