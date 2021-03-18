@@ -8,15 +8,15 @@
       flex-col md:flex-row"
     >
       <div
-        class="bg-black w-1/4 h-32 mb-5"
+        class="bg-black w-1/2 md:w-1/4 h-32 mb-5"
         @click="$router.push({ name: 'Follow', params: { id: 'followA' } })"
       />
       <div
-        class="bg-black w-1/4 h-32 mb-5"
+        class="bg-black w-1/2 md:w-1/4 h-32 mb-5"
         @click="$router.push({ name: 'Follow', params: { id: 'followB' } })"
       />
       <div
-        class="bg-black w-1/4 h-32 mb-5"
+        class="bg-black w-1/2 md:w-1/4 h-32 mb-5"
         @click="$router.push({ name: 'Follow', params: { id: 'followC' } })"
       />
     </div>

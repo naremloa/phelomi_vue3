@@ -1,10 +1,16 @@
 <template>
   <block
     id="MapBlock"
-    class="bg-map-texture bg-cover h-full"
+    class=" bg-cover h-full
+    bg-error md:bg-map-texture"
     :title="blockTitle"
     style="min-height: 68.38vw"
-  />
+  >
+    <div
+      class="w-full h-full bg-map-texture bg-cover"
+      style="min-height: 68.38vw"
+    />
+  </block>
 </template>
 <script>
 import Block from './Block.vue';
