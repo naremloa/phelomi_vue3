@@ -9,6 +9,6 @@ RUN yarn install
 RUN yarn build:client
 RUN yarn build:server
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD [ "yarn", "server" ]
+CMD [ "yarn", "start" ]

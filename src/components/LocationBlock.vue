@@ -7,7 +7,7 @@
       <div
         class="absolute -z-1 flex flex-col items-center w-full
         transform h-9/10 overflow-hidden
-        -translate-x-1/2 md:-translate-x-1/2"
+        -translate-x-1/2 md:-translate-x-1/4"
       >
         <img
           class="h-full w-full"

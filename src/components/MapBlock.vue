@@ -7,7 +7,7 @@
     style="min-height: 68.38vw"
   >
     <div
-      class="w-full h-full bg-map-texture bg-cover"
+      class="block md:hidden w-full h-full bg-map-texture bg-cover"
       style="min-height: 68.38vw"
     />
   </block>
