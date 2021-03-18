@@ -8,8 +8,9 @@
     <div class="w-full h-52 relative">
       <img
         v-if="img"
+        v-lazy="img"
+        v-check
         class="object-cover w-full h-full"
-        :src="img"
       >
       <div
         v-show="focus"

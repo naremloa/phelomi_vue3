@@ -2848,6 +2848,11 @@ vue-eslint-parser@^7.4.1:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
+vue-lazyload-next@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/vue-lazyload-next/-/vue-lazyload-next-0.0.1.tgz#b455eb737bec668bca402e5e2230a1073bae9d55"
+  integrity sha512-elwvfe7PZdl/jBtxUmIAhHpHYf9CJ5zuCTv2de3kjpP0Ft4WKp4yP9DgZTnIeU+ByZq7YN8GN5tdMO1311ettw==
+
 vue-router@4:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.3.tgz#8b26050c88b2dec7e27a88835f71046b365823ec"

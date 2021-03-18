@@ -1,10 +1,10 @@
 <template>
-  <div class="news-content flex md:px-6 pb-4 flex-col md:flex-row items-center">
+  <div class="news-content flex md:px-6 pb-4 flex-col md:flex-row items-start">
     <div class="news-image md:w-2/5 h-full md:pr-12 md:pl-6 flex-grow">
       <img
         v-if="img"
+        v-lazy="img"
         class="h-full w-full object-contain object-top"
-        :src="img"
       >
     </div>
     <div class="news-content md:pr-11 md:w-3/5 h-full flex-grow">

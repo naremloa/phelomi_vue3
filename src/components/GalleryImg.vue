@@ -4,8 +4,8 @@
   >
     <img
       v-if="src"
+      v-lazy="src"
       class="w-full h-full object-cover"
-      :src="src"
     >
   </div>
 </template>
