@@ -19,7 +19,6 @@ module.exports = {
       widest: '.25em',
       infinity: '.75em',
     },
-
     extend: {
       colors: {
         primary: '#2F599C',
@@ -54,12 +53,15 @@ module.exports = {
       },
       height: {
         96: '24rem',
+        100: '25rem',
+        120: '30rem',
         160: '40rem',
         164: '41rem',
         180: '44rem',
         280: '70rem',
         281: '70.25rem',
         '9/10': '90%',
+        400: '100rem',
       },
       maxHeight: {
         160: '40rem',
@@ -82,10 +84,14 @@ module.exports = {
       zIndex: {
         '-1': -1,
       },
+      padding: {
+        400: '100rem',
+      },
       backgroundImage: () => ({
         'nav-item-texture-hover': 'url("/assets/bg_image/bg_nav-item_hover.png")',
         'nav-item-texture': 'url("/assets/bg_image/bg_nav-item.png")',
         'footer-texture': 'url("/assets/bg_image/bg_order.png")',
+        'footer-full-texture': 'url("/assets/bg_image/bg_full-footer.png")',
         'footer-info-texture': 'url("/assets/bg_image/bg_footer.png")',
         'header-texture': 'url("/assets/bg_image/bg_header.jpg")',
         'title-texture': 'url("/assets/bg_image/bg_title.png")',

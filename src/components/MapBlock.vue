@@ -2,7 +2,7 @@
   <block
     id="MapBlock"
     class=" bg-cover h-full
-    bg-error md:bg-map-texture"
+    bg-accent md:bg-map-texture"
     :title="blockTitle"
     style="min-height: 68.38vw"
   >
