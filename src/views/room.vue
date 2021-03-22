@@ -4,8 +4,11 @@
     <template v-if="room.imgOptions && room.imgOptions.length">
       <content-swiper :options="room.imgOptions">
         <template #default="item">
-          <div>
-            <img :src="item">
+          <div class="h-52 sm:h-72 md:h-96 xl:h-160 w-full">
+            <img
+              :src="item"
+              class="object-cover h-full w-full"
+            >
           </div>
         </template>
       </content-swiper>

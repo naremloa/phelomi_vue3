@@ -21,7 +21,12 @@
         <div
           class="text-error text-2xl font-bold tracking-widest"
         >
-          {{ address }}
+          <a
+            :href="url"
+            target="_blank"
+          >
+            {{ address }}
+          </a>
         </div>
       </div>
       <div>
@@ -87,6 +92,10 @@ export default {
       default: '',
     },
     address: {
+      type: String,
+      default: '',
+    },
+    url: {
       type: String,
       default: '',
     },

@@ -12,6 +12,7 @@ export default [
     title: '民宿地理位置',
     description: '飛樂米星空號位於',
     address: '澎湖縣馬公市山水里22鄰珠江182號',
+    url: 'https://maps.app.goo.gl/1bEjCnPUHJeXzLQ16',
     distanceTitle: '民宿距離',
     distance: [
       {
@@ -46,6 +47,7 @@ export default [
     title: '搭船',
     description: '馬公碼頭位於',
     address: '澎湖縣馬公市新營路25號',
+    url: 'https://maps.goo.gl/maps/u9wGKvvZ2wYZEtV26',
     distanceTitle: '船班資訊',
     distance: [
       {
@@ -86,6 +88,7 @@ export default [
     title: '搭飛機',
     description: '澎湖機場位於',
     address: '澎湖縣湖西鄉隘門村126-5號',
+    url: 'https://maps.goo.gl/maps/k1wG5P2KHNTHKFFL7',
     distanceTitle: '班機資訊',
     distance: [
       {

@@ -9,7 +9,7 @@
       h-100 md:h-280"
     >
       <div class="flex items-center flex-col mb-5">
-        <div class="flex w-full">
+        <div class="flex w-full mb-5">
           <div
             class="justify-end pr-10 w-1/2
             border-r-1 border-secondary h-44
@@ -36,7 +36,7 @@
             >
               澎湖縣馬公市山水里珠江182號
             </contact-item>
-            <div class="flex mt-2 ml-2">
+            <div class="flex mt-2 ml-2 flex-wrap">
               <long-social-btn
                 class="flex-grow mr-2"
                 :img="iconWechat"
@@ -49,10 +49,26 @@
               >
                 LINE 加入好友
               </long-social-btn>
+              <div class="flex-grow min-w-min" />
+              <long-social-btn
+                class="flex-grow mr-2"
+                :img="iconLine"
+              >
+                LINE 加入好友
+              </long-social-btn>
+              <long-social-btn
+                class="flex-grow mr-2"
+                :img="iconLine"
+              >
+                LINE 加入好友
+              </long-social-btn>
             </div>
           </div>
         </div>
-        <div class="flex w-36 h-7 mt-5 mb-2">
+        <div
+          class="w-36 h-7 mb-2
+          hidden md:flex"
+        >
           <social-btn-facebook />
           <social-btn-line />
           <social-btn-wechat />

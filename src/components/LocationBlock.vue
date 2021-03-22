@@ -6,8 +6,9 @@
     <div class="relative overflow-hidden -ml-6">
       <div
         class="absolute -z-1 flex flex-col items-center w-full
-        transform h-9/10 overflow-hidden
-        -translate-x-1/2 md:-translate-x-1/4"
+        transform overflow-hidden
+        md:-translate-x-1/4
+        h-full md:h-9/10"
       >
         <img
           class="h-full w-full"
@@ -17,7 +18,7 @@
       <div
         class="flex flex-col items-center w-full
         md:transform md:translate-x-1/4
-        text-white text-sm pt-8 md:pt-32"
+        text-white text-sm py-8 md:pt-32 md:pb-0"
       >
         <location-item
           class="bg-info mb-4"

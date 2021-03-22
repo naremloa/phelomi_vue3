@@ -1,6 +1,10 @@
 <template>
-  <div class="header w-full bg-green-400 h-32 px-3 relative bg-header-texture bg-cover">
-    <div class="w-full h-full flex items-center justify-center md:justify-start">
+  <div class="header w-full px-3 relative bg-header-texture bg-cover">
+    <div
+      class="w-full h-full flex items-center py-3
+      justify-center md:justify-start
+      flex-col md:flex-row"
+    >
       <div
         class="w-65 cursor-pointer mr-4"
         @click="jumpTo({ name: 'Home' })()"
@@ -11,13 +15,18 @@
         >
       </div>
       <div class="flex-grow hidden md:block" />
-      <menu-item
-        v-for="(item, iIdx) in menuItems"
-        :key="`menu-item-${iIdx}`"
-        v-bind="item"
-      />
+      <div class="flex">
+        <menu-item
+          v-for="(item, iIdx) in menuItems"
+          :key="`menu-item-${iIdx}`"
+          v-bind="item"
+        />
+      </div>
     </div>
-    <div class="absolute w-36 h-7 top-2 right-2 md:right-8 flex">
+    <div
+      class="absolute w-36 h-7 top-2 right-2 md:right-8
+      hidden md:flex"
+    >
       <social-btn-facebook />
       <social-btn-line />
       <social-btn-wechat />
@@ -46,6 +55,7 @@ export default {
       {
         label: '最新消息',
         hash: '#NewsBlock',
+        phone: false,
       },
       {
         label: '房型介紹',
@@ -54,14 +64,17 @@ export default {
       {
         label: '交通位置',
         hash: '#LocationBlock',
+        phone: false,
       },
       {
-        label: '澎湖找樂子',
+        label: '澎湖樂子',
         hash: '#MapBlock',
+        phone: false,
       },
       {
         label: '跟我醬玩',
         hash: '#ArticlesBlock',
+        phone: false,
       },
       {
         label: '線上訂房',
