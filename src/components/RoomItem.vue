@@ -1,6 +1,6 @@
 <template>
   <div
-    class="md:px-2 cursor-pointer"
+    class="lg:px-2 cursor-pointer"
     @mouseover="handleFocus"
     @mouseleave="handleBlur"
     @click="handleClick "
@@ -27,10 +27,10 @@
     <div class="flex">
       <img
         class="w-3 h-3 mt-2
-        hidden md:block"
+        hidden lg:block"
         :src="star"
       >
-      <div class="md:px-6">
+      <div class="lg:px-6 flex-grow">
         <div
           class="w-full
             text-2xl text-center text-primary font-bold
@@ -47,7 +47,7 @@
       </div>
       <img
         class="w-3 h-3 mt-2
-        hidden md:block"
+        hidden lg:block"
         :src="star"
       >
     </div>

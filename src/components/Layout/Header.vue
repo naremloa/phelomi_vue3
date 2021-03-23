@@ -1,5 +1,8 @@
 <template>
-  <div class="header w-full px-3 relative bg-header-texture bg-cover">
+  <div
+    class="header w-full px-3 relative bg-header-texture bg-cover min-h-40
+    flex items-center"
+  >
     <div
       class="w-full h-full flex items-center py-3
       justify-center md:justify-start

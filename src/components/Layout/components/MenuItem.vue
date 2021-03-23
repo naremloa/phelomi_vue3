@@ -8,7 +8,7 @@
     "
     :class="{
       'hidden': !phone,
-      'md:flex': !phone,
+      'lg:flex': !phone,
       'flex': phone,
     }"
     @click="handleClick"
