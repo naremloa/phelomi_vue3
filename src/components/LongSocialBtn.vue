@@ -1,6 +1,6 @@
 <template>
   <button
-    class="long-social-btn text-white px-2 h-7 block rounded max-w-28 whitespace-nowrap"
+    class="long-social-btn text-white px-2 h-7 block rounded max-w-28 whitespace-nowrap mb-2"
   >
     <div class="flex items-center">
       <template v-if="img">

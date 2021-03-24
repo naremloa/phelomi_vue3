@@ -8,7 +8,7 @@
       bg-footer-info-texture md:bg-footer-full-texture
       h-100 md:h-280"
     >
-      <div class="flex items-center flex-col mb-5">
+      <div class="flex items-center flex-col mb-5 w-full md:w-auto">
         <div class="flex w-full mb-5">
           <div
             class="justify-end pr-10 w-1/2
@@ -20,23 +20,27 @@
               :src="logoVertical"
             >
           </div>
-          <div class="flex flex-col pl-10 text-xs text-secondary w-full md:w-1/2">
-            <contact-item :img="iconPhone">
-              (06)995-3288
-            </contact-item>
-            <contact-item :img="iconPhone">
-              0967-229-968
-            </contact-item>
-            <contact-item :img="iconEmail">
-              2019starrysky@gmail.com
-            </contact-item>
-            <contact-item
-              class="tracking-widest"
-              :img="iconAddress"
-            >
-              澎湖縣馬公市山水里珠江182號
-            </contact-item>
-            <div class="flex mt-2 ml-2 flex-wrap">
+          <div class="flex flex-col pl-10 text-xs text-secondary w-full">
+            <div class="flex justify-center">
+              <div class="inline-flex flex-col items-start">
+                <contact-item :img="iconPhone">
+                  (06)995-3288
+                </contact-item>
+                <contact-item :img="iconPhone">
+                  0967-229-968
+                </contact-item>
+                <contact-item :img="iconEmail">
+                  2019starrysky@gmail.com
+                </contact-item>
+                <contact-item
+                  class="tracking-widest"
+                  :img="iconAddress"
+                >
+                  澎湖縣馬公市山水里珠江182號
+                </contact-item>
+              </div>
+            </div>
+            <div class="flex mt-2 flex-wrap justify-center">
               <long-social-btn
                 class="flex-grow mr-2"
                 :img="iconWechat"
@@ -49,18 +53,19 @@
               >
                 LINE 加入好友
               </long-social-btn>
-              <div class="flex-grow min-w-min" />
+            </div>
+            <div class="flex md:hidden mt-2 flex-wrap justify-center">
               <long-social-btn
                 class="flex-grow mr-2"
                 :img="iconLine"
               >
-                LINE 加入好友
+                FB 加入好友
               </long-social-btn>
               <long-social-btn
                 class="flex-grow mr-2"
                 :img="iconLine"
               >
-                LINE 加入好友
+                IG 加入好友
               </long-social-btn>
             </div>
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center mb-1">
+  <div class="inline-flex items-center mb-1">
     <template v-if="img">
       <img
         class="w-8 h-8 mr-2"

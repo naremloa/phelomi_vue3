@@ -30,7 +30,7 @@
         hidden lg:block"
         :src="star"
       >
-      <div class="lg:px-6 flex-grow">
+      <div class="lg:px-4 flex-grow">
         <div
           class="w-full
             text-2xl text-center text-primary font-bold

@@ -1,7 +1,7 @@
 <template>
   <div
     class="rounded-2xl pt-3 pb-4 px-8 w-52 relative cursor-pointer
-      hover:shadow-location"
+      lg:hover:shadow-location"
     @mouseover="handleFocus"
     @mouseleave="handleBlur"
     @click="handleClick"
@@ -17,7 +17,8 @@
     <img
       v-if="active"
       v-show="activeShow"
-      class="absolute w-1/2 h-1/2 left-full top-1/3 ml-7 hover:bg-black"
+      class="absolute w-1/2 h-1/2 left-full top-1/3 ml-7 hover:bg-black
+      hidden lg:block"
       :src="active"
     >
   </div>
