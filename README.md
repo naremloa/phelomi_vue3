@@ -20,4 +20,12 @@
 2. `beta` 為開發主分支，所有 `commit` 內容皆由 `PR(pull request)` 來。
 3. 其餘分支為個人開發分支，按照個人手上需求分類去開。開發完成後，通過 `PR` 提交上來，通過審核後，才會進入主分支。
 
+## 部署流程
+```sh
+# 第一次
+heroku container:login
+heroku container:push web
+heroku container:release web
+```
+
 
