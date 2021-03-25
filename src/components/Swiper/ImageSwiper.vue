@@ -64,10 +64,11 @@ export default {
 .swiper-container
 .swiper-pagination
 .swiper-pagination-bullet {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background-color: transparent;
-  border: 2px solid black;
+  border: 1px solid #f6b42c;
+  opacity: 0.8;
 }
 .swiper-container
 .swiper-pagination {
@@ -77,6 +78,6 @@ export default {
 .swiper-container
 .swiper-pagination
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: black;
+  background-color: #f6b42c;
 }
 </style>

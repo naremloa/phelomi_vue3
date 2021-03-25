@@ -1,6 +1,10 @@
 <template>
-  <layout>
-    <router-view />
+  <layout class="overflow-hidden">
+    <router-view v-slot="{ Component }">
+      <div id="Content">
+        <component :is="Component" />
+      </div>
+    </router-view>
   </layout>
 </template>
 

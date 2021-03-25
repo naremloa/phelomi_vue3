@@ -1,11 +1,19 @@
 <template>
   <div class="h-full w-full relative">
     <div
-      class="absolute inset-y-1/2 z-10 transform -translate-y-1/2"
+      class="absolute inset-y-1/2 z-10 transform -translate-y-1/2
+      rounded-full bg-primary flex justify-center items-center
+      h-4 md:h-7 w-4 md:w-7 "
       :class="navigationClassName"
       @click="onClickPrev"
     >
-      左
+      <svg-icon
+        :path="mdiChevronLeft"
+        :height="40"
+        :width="40"
+        fill="#fff"
+        style="flex-shrink: 0.5"
+      />
     </div>
     <swiper
       v-if="options && options.length"
@@ -18,27 +26,37 @@
       <swiper-slide
         v-for="(option, optionIdx) in options"
         :key="`slide-${optionIdx}`"
-        class="px-4"
+        class="px-5 md:px-8"
       >
         <slot v-bind="option" />
       </swiper-slide>
     </swiper>
     <div
-      class="absolute inset-y-1/2 right-0 z-10 transform -translate-y-1/2"
+      class="absolute inset-y-1/2 right-0 z-10 transform -translate-y-1/2
+      rounded-full bg-primary flex justify-center items-center
+      h-4 md:h-7 w-4 md:w-7"
       :class="navigationClassName"
       @click="onClickNext"
     >
-      右
+      <svg-icon
+        :path="mdiChevronRight"
+        :height="40"
+        :width="40"
+        fill="#fff"
+        style="flex-shrink: 0.5"
+      />
     </div>
   </div>
 </template>
 <script>
 import { ref } from 'vue';
 import { Swiper, SwiperSlide } from '@/plugins/swiper';
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
+import svgIcon from '@/components/SvgIcon.vue';
 
 export default {
   name: 'ContentSwiper',
-  components: { Swiper, SwiperSlide },
+  components: { Swiper, SwiperSlide, svgIcon },
   props: {
     options: {
       type: Array,
@@ -69,6 +87,8 @@ export default {
       swiper.slideNext();
     };
     return {
+      mdiChevronLeft,
+      mdiChevronRight,
       navigationClassName,
       onSwiper,
       onClickPrev,
