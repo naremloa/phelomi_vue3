@@ -1,6 +1,6 @@
 <template>
   <block
-    id="RoomsBlock"
+    id="Room"
     class=" bg-accent"
     :title="blockTitle"
   >

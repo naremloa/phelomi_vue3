@@ -1,6 +1,6 @@
 <template>
   <block
-    id="NewsBlock"
+    id="News"
     class=""
     :title="blockTitle"
   >

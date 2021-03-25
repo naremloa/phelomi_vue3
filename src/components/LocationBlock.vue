@@ -1,6 +1,6 @@
 <template>
   <block
-    id="LocationBlock"
+    id="Location"
     :title="blockTitle"
   >
     <div class="relative overflow-hidden -ml-6">

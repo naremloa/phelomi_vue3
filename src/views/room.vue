@@ -123,7 +123,7 @@
       <div class="w-1/4 hidden md:block">
         <a
           class="inline-block bg-error rounded-full"
-          href="https://google.com"
+          :href="orderLink"
           target="_blank"
         >
           <button
@@ -146,6 +146,7 @@ import {
   roomsCategory,
 } from '@/data/roomsDetailData';
 import roomsData from '@/data/roomsData';
+import { orderLink } from '@/data/orderData';
 import { ContentSwiper } from '@/components/Swiper';
 import BlockTitle from '@/components/BlockTitle.vue';
 import RoomIcon from '@/components/RoomIcon.vue';
@@ -202,6 +203,7 @@ export default {
       liveNotice,
       unsubscribe,
       end,
+      orderLink,
     };
   },
 };

@@ -1,6 +1,6 @@
 <template>
   <block
-    id="ArticlesBlock"
+    id="Follow"
     :title="blockTitle"
   >
     <div

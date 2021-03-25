@@ -57,32 +57,32 @@ export default {
     const menuItems = [
       {
         label: '最新消息',
-        hash: '#NewsBlock',
+        hash: '#News',
         phone: false,
       },
       {
         label: '房型介紹',
-        hash: '#RoomsBlock',
+        hash: '#Room',
       },
       {
         label: '交通位置',
-        hash: '#LocationBlock',
+        hash: '#Location',
         phone: false,
       },
       {
         label: '澎湖樂子',
-        hash: '#MapBlock',
+        hash: '#Map',
         phone: false,
       },
       {
         label: '跟我醬玩',
-        hash: '#ArticlesBlock',
+        hash: '#Follow',
         phone: false,
       },
-      {
-        label: '線上訂房',
-        hash: '#ArticlesBlock',
-      },
+      // {
+      //   label: '線上訂房',
+      //   hash: '#ArticlesBlock',
+      // },
       {
         label: '聯絡我們',
         hash: '#Footer',

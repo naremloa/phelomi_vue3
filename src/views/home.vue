@@ -1,12 +1,5 @@
 <template>
-  <Suspense>
-    <template #default>
-      <gallery-block />
-    </template>
-    <template #fallback>
-      等待中
-    </template>
-  </Suspense>
+  <gallery-block />
   <news-block />
   <rooms-block />
   <location-block />

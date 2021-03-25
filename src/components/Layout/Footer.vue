@@ -1,6 +1,5 @@
 <template>
   <div
-    id="Footer"
     class="footer w-full flex flex-col justify-end mt-24"
   >
     <div
@@ -8,7 +7,10 @@
       bg-footer-info-texture md:bg-footer-full-texture
       h-100 md:h-280"
     >
-      <div class="flex items-center flex-col mb-5 w-full md:w-auto">
+      <div
+        id="Footer"
+        class="flex items-center flex-col mb-5 w-full md:w-auto"
+      >
         <div class="flex w-full mb-5">
           <div
             class="justify-end pr-10 w-1/2

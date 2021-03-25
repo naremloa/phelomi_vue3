@@ -25,7 +25,7 @@
 </template>
 <script>
 import { toRefs } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 
 export default {
   name: 'MenuItem',
@@ -46,8 +46,12 @@ export default {
   setup(props) {
     const { hash } = toRefs(props);
     const router = useRouter();
+    const route = useRoute();
     const handleClick = () => {
-      if (hash.value) router.push({ hash: hash.value });
+      if (hash.value) {
+        if (hash.value.replace(/#/g, '') === route.name) router.push({ hash: '#Content' });
+        else router.push({ name: 'Home', hash: hash.value });
+      }
     };
     return {
       handleClick,

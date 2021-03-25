@@ -3,6 +3,7 @@ import {
   createMemoryHistory,
   createWebHistory,
 } from 'vue-router';
+import Home from '@/views/home.vue';
 
 // const pages = import.meta.glob('../views/*.vue');
 
@@ -19,7 +20,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/home.vue'),
+    component: Home,
   },
   {
     path: '/room/:id',
@@ -55,7 +56,11 @@ export function createRouter() {
     routes,
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) return savedPosition;
-      if (to.hash) return { el: to.hash, behavior: 'smooth' };
+      if (to.hash) {
+        return new Promise((res) => {
+          setTimeout(() => { res({ el: to.hash, behavior: 'smooth' }); }, 100);
+        });
+      }
       // 預設 始終滾動頂部
       return { top: 0 };
     },

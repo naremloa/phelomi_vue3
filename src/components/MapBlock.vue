@@ -1,6 +1,6 @@
 <template>
   <block
-    id="MapBlock"
+    id="Map"
     class=" bg-cover h-full
     bg-accent md:bg-map-texture"
     :title="blockTitle"
