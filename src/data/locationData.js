@@ -47,7 +47,7 @@ export default [
     title: '搭船',
     description: '馬公碼頭位於',
     address: '澎湖縣馬公市新營路25號',
-    url: 'https://maps.goo.gl/maps/u9wGKvvZ2wYZEtV26',
+    url: 'https://maps.app.goo.gl/ssbW4bPokwhDZkQ6A',
     distanceTitle: '船班資訊',
     distance: [
       {
@@ -88,7 +88,7 @@ export default [
     title: '搭飛機',
     description: '澎湖機場位於',
     address: '澎湖縣湖西鄉隘門村126-5號',
-    url: 'https://maps.goo.gl/maps/k1wG5P2KHNTHKFFL7',
+    url: 'https://maps.app.goo.gl/cuUkR7zpWSB66exD6',
     distanceTitle: '班機資訊',
     distance: [
       {

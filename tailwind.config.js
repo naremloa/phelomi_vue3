@@ -30,6 +30,7 @@ module.exports = {
         info: '#41BBD6',
         success: '#94BF80',
         warning: '#FFC107',
+        grey: '#f5f5f5',
       },
       width: {
         18: '4.5rem',
