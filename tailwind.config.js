@@ -100,7 +100,7 @@ module.exports = {
         'footer-full-texture': 'url("/assets/bg_image/bg_full-footer.png")',
         'footer-info-texture': 'url("/assets/bg_image/bg_footer.png")',
         'header-texture': 'url("/assets/bg_image/bg_header.jpg")',
-        'title-texture': 'url("/assets/bg_image/bg_title.png")',
+        // 'title-texture': 'url("/assets/bg_image/bg_title_ship.svg")',
         'map-texture': 'url("/assets/bg_image/bg_haveFun.jpg")',
         'location-texture': 'url("/assets/bg_image/bg_location.jpg")',
         'line-texture': 'url("/assets/bg_image/line.png")',

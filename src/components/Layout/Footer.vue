@@ -59,13 +59,13 @@
             <div class="flex md:hidden mt-2 flex-wrap justify-center">
               <long-social-btn
                 class="flex-grow mr-2"
-                :img="iconLine"
+                :img="iconFb"
               >
                 FB 加入好友
               </long-social-btn>
               <long-social-btn
                 class="flex-grow mr-2"
-                :img="iconLine"
+                :img="iconIg"
               >
                 IG 加入好友
               </long-social-btn>
@@ -102,6 +102,8 @@ import iconPhone from '@/assets/contact/icon_phone.svg';
 import iconAddress from '@/assets/contact/icon_address.svg';
 import iconLine from '@/assets/contact/icon_white_line.svg';
 import iconWechat from '@/assets/contact/icon_white_wechat.svg';
+import iconFb from '@/assets/contact/icon_white_fb.svg';
+import iconIg from '@/assets/contact/icon_white_ig.svg';
 import logoVertical from '../../assets/logo/logo_vertical.svg';
 import SocialBtnFacebook from './components/SocialBtnFacebook.vue';
 import SocialBtnInstagram from './components/SocialBtnInstagram.vue';
@@ -125,6 +127,8 @@ export default {
       iconAddress,
       iconLine,
       iconWechat,
+      iconFb,
+      iconIg,
     };
   },
 };

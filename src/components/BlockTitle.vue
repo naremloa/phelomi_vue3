@@ -12,14 +12,15 @@
         bg-title-texture bg-cover bg-no-repeat bg-right-bottom"
       >
         <div
-          class="pb-1 mb-1
+          class="pb-1 mb-1 border-b-2 border-primary
           text-3xl md:text-4xl
           pl-0 md:pl-6
-          pr-0 md:pr-3"
+          pr-3 md:pr-3"
         >
           {{ zh }}
         </div>
-        <div class="w-18 h-20">
+        <div class="w-18 h-20 flex justify-end flex-col mb-1">
+          <img :src="bgTitleShip">
           <!-- <img :src="titleLogo"> -->
         </div>
       </div>
@@ -36,7 +37,8 @@
   </div>
 </template>
 <script>
-const titleLogo = 'https://fakeimg.pl/71x62/';
+import bgTitleShip from '@/assets/bg_image/bg_title_ship.svg';
+
 export default {
   name: 'BlockTitle',
   props: {
@@ -51,7 +53,7 @@ export default {
   },
   setup() {
     return {
-      titleLogo,
+      bgTitleShip,
     };
   },
 };
