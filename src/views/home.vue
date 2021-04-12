@@ -3,7 +3,7 @@
   <news-block />
   <rooms-block />
   <location-block />
-  <map-block class="-mt-8" />
+  <map-block class="-mt-8 md:mt-0" />
   <articles-block />
   <!-- <footer-block /> -->
 </template>

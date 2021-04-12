@@ -5,7 +5,7 @@
     @mouseleave="handleBlur"
     @click="handleClick "
   >
-    <div class="w-full h-52 relative">
+    <div class="w-full h-52 relative 2xl:h-64">
       <img
         v-if="img"
         class="object-cover w-full h-full"
@@ -13,7 +13,7 @@
       >
       <div
         v-show="focus"
-        class="w-full h-52 bg-gray-800 top-0 left-0 absolute bg-opacity-60
+        class="w-full h-full bg-gray-800 top-0 left-0 absolute bg-opacity-60
         flex justify-center items-center"
       >
         <div class=" w-1/2 h-2/3">
